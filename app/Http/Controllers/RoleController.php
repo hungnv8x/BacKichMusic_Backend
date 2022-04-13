@@ -2,84 +2,72 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RoleRequest;
 use App\Models\Role;
+use App\Repositories\RoleRepository;
 use Illuminate\Http\Request;
+
 
 class RoleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public $roleRepository;
+    public function __construct(RoleRepository $roleRepository)
+    {
+        $this->roleRepository = $roleRepository;
+
+
+    }
     public function index()
     {
-        //
+        $roles = $this->roleRepository->getAll();
+        return response()->json($roles,200);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        // $categories = $this->categoryRepository->getAll();
+        // return view('backend.role.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $this->roleRepository->store($request);
+        return response()->json([
+            'message' => "Successfully created",
+            'success' => true
+        ], 200);
+    }
+    public function show($id)
+    {
+        $role = $this->roleRepository->getById($id);
+//        dd($role);
+        return response()->json($role,200);
+
+    }
+    public function edit($id)
+    {
+        // $role = $this->roleRepository->getById($id);
+        // return response()->json($role,200);
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Role  $role
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Role $role)
+    public function update(Request $request, $id)
     {
-        //
+        $this->roleRepository->update($request,$id);
+        return response()->json([
+            'message' => "Successfully updated",
+            'success' => true
+        ], 200);
+
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Role  $role
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Role $role)
+    public function destroy($id)
     {
-        //
-    }
+        $this->roleRepository->deleteById($id);
+        return response()->json([
+            'message' => "Successfully deleted",
+            'success' => true
+        ], 200);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Role  $role
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Role $role)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Role  $role
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Role $role)
-    {
-        //
     }
 }
