@@ -15,6 +15,8 @@ class CreatePlaylistSongsTable extends Migration
     {
         Schema::create('playlist_songs', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable();
+            $table->string('image')->nullable();
             $table->unsignedBigInteger('playlist_id');
             $table->foreign('playlist_id')->references('id')->on('playlists');
             $table->unsignedBigInteger('song_id');
