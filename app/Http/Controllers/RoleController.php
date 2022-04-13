@@ -22,11 +22,6 @@ class RoleController extends Controller
         $roles = $this->roleRepository->getAll();
         return response()->json($roles,200);
     }
-    public function create()
-    {
-        // $categories = $this->categoryRepository->getAll();
-        // return view('backend.role.create');
-    }
 
     public function store(Request $request)
     {
@@ -39,14 +34,7 @@ class RoleController extends Controller
     public function show($id)
     {
         $role = $this->roleRepository->getById($id);
-//        dd($role);
         return response()->json($role,200);
-
-    }
-    public function edit($id)
-    {
-        // $role = $this->roleRepository->getById($id);
-        // return response()->json($role,200);
 
     }
 
