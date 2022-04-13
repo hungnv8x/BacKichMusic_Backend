@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('role_id');
+            $table->unsignedBigInteger('role_id')->default('2');
             $table->foreign('role_id')->references('id')->on('roles');
             $table->string('name');
             $table->string('avatar')->nullable();
