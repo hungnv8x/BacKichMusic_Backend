@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use http\Client\Response;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-use Validator;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -18,7 +19,6 @@ class AuthController extends Controller
             'email' => 'required|email',
             'password' => 'required|string|min:6|max:8',
         ]);
-
         if ($validator->fails()) {
             return response()->json($validator->errors(), 422);
         }
@@ -30,8 +30,9 @@ class AuthController extends Controller
         return $this->createNewToken($token);
     }
 
+
     public function register(Request $request) {
-        // dd($request);
+//         dd($request);
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|between:2,100',
             'email' => 'required|string|email|max:100|unique:users',
@@ -70,6 +71,7 @@ class AuthController extends Controller
     }
 
     protected function createNewToken($token){
+//        dd($token);
         return response()->json([
             'access_token' => $token,
             'token_type' => 'bearer',
