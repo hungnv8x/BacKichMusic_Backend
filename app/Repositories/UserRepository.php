@@ -18,6 +18,15 @@ class UserRepository extends BaseRepository
     {
         $user = new User();
         $user->name = $request->name;
+        if ($request->has('avatar')) {
+            $file = $request->image;
+            $file_name = time() . '_' . $file->getClientOriginalName();
+            // dd($file_name);
+            $file->move(public_path('uploads'), $file_name);
+        }
+        $user->avatar = $file_name ?? "";
+        // $user['avatar'] = $file_name ?? "";
+
         $user->email = $request->email;
         $user->role_id = 2;
         $user->password = Hash::make($request->password);
@@ -27,8 +36,17 @@ class UserRepository extends BaseRepository
 
     public function update($request,$id)
     {
-        $user = user::find($id);
+        $user = User::find($id);
         $user->name = $request->name;
+
+        if ($request->has('avatar')) {
+            $file = $request->avatar;
+            $file_name = time() . '_' . $file->getClientOriginalName();
+            // dd($file_name);
+            $file->move(public_path('uploads'), $file_name);
+        }
+        $user['avatar'] = $file_name ?? "";
+
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();
