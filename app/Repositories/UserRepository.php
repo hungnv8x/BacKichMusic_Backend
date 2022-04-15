@@ -28,7 +28,7 @@ class UserRepository extends BaseRepository
         // $user['avatar'] = $file_name ?? "";
 
         $user->email = $request->email;
-        $user->role_id = 2;
+        $user->role_id = $request->role_id;
         $user->password = Hash::make($request->password);
         $user->save();
 

@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SongController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 
@@ -61,3 +62,15 @@ Route::prefix('categories')->group(function () {
     Route::get('{id}/detail',[CategoryController::class, 'show'])->name('category.detail');
     Route::delete('{id}/delete',[CategoryController::class, 'destroy'])->name('category.delete');
 });
+
+Route::prefix('songs')->group(function () {
+    Route::get('',[SongController::class, 'index'])->name('category.index');
+    Route::get('create',[SongController::class, 'create'])->name('category.showFormCreate');
+    Route::post('create',[SongController::class, 'store'])->name('category.create');
+    Route::get('{id}/update',[SongController::class, 'edit'])->name('category.showFormUpdate');
+    Route::put('{id}/update',[SongController::class, 'update'])->name('category.update');
+    Route::get('{id}/detail',[SongController::class, 'show'])->name('category.detail');
+    Route::delete('{id}/delete',[SongController::class, 'destroy'])->name('category.delete');
+});
+
+
