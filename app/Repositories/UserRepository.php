@@ -18,14 +18,8 @@ class UserRepository extends BaseRepository
     {
         $user = new User();
         $user->name = $request->name;
-        if ($request->has('avatar')) {
-            $file = $request->image;
-            $file_name = time() . '_' . $file->getClientOriginalName();
-            // dd($file_name);
-            $file->move(public_path('uploads'), $file_name);
-        }
-        $user->avatar = $file_name ?? "";
-        // $user['avatar'] = $file_name ?? "";
+        
+        $user->avatar = $request->avatar;
 
         $user->email = $request->email;
         $user->role_id = 2;

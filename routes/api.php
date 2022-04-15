@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SingerController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -60,4 +62,12 @@ Route::prefix('categories')->group(function () {
     Route::put('{id}/update',[CategoryController::class, 'update'])->name('category.update');
     Route::get('{id}/detail',[CategoryController::class, 'show'])->name('category.detail');
     Route::delete('{id}/delete',[CategoryController::class, 'destroy'])->name('category.delete');
+});
+
+Route::prefix('singers')->group(function(){
+    Route::get('', [SingerController::class, 'index'])->name('singer.index');
+    Route::post('create', [SingerController::class, 'store'])->name('singer.create');
+    Route::put('{id}/update', [SingerController::class, 'update']);
+    Route::delete('{id}/update', [SingerController::class, 'destroy']);
+
 });
