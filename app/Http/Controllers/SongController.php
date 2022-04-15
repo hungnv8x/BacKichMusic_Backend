@@ -2,84 +2,60 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SongRequest;
 use App\Models\Song;
+use App\Repositories\SongRepository;
 use Illuminate\Http\Request;
+
 
 class SongController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public $songRepository;
+    public function __construct(SongRepository $songRepository)
+    {
+        $this->songRepository = $songRepository;
+
+
+    }
     public function index()
     {
-        //
+        $songs = $this->songRepository->getAll();
+        return response()->json($songs,200);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $this->songRepository->store($request);
+        return response()->json([
+            'message' => "Successfully created",
+            'success' => true
+        ], 200);
+    }
+    public function show($id)
+    {
+        $song = $this->songRepository->getById($id);
+        return response()->json($song,200);
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Song  $song
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Song $song)
+    public function update(Request $request, $id)
     {
-        //
+        $this->songRepository->update($request,$id);
+        return response()->json([
+            'message' => "Successfully updated",
+            'success' => true
+        ], 200);
+
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Song  $song
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Song $song)
+    public function destroy($id)
     {
-        //
-    }
+        $this->songRepository->deleteById($id);
+        return response()->json([
+            'message' => "Successfully deleted",
+            'success' => true
+        ], 200);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Song  $song
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Song $song)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Song  $song
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Song $song)
-    {
-        //
     }
 }

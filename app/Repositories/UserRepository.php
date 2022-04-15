@@ -22,7 +22,7 @@ class UserRepository extends BaseRepository
         $user->avatar = $request->avatar;
 
         $user->email = $request->email;
-        $user->role_id = 2;
+        $user->role_id = $request->role_id;
         $user->password = Hash::make($request->password);
         $user->save();
 
