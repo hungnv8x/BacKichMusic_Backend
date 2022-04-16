@@ -40,7 +40,7 @@ class SingerController extends Controller
 
 
 
-    public function update(Request $request, Singer $singer)
+    public function update(Request $request, $id)
     {
         $this->singerRepository->update($request,$id);
         return response()->json([

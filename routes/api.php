@@ -70,7 +70,7 @@ Route::prefix('categories')->group(function () {
 Route::prefix('singers')->group(function(){
     Route::get('', [SingerController::class, 'index'])->name('singer.index');
     Route::post('create', [SingerController::class, 'store'])->name('singer.create');
-    Route::get('detail', [SingerController::class, 'show']);
+    Route::get('{id}/detail', [SingerController::class, 'show']);
     Route::put('{id}/update', [SingerController::class, 'update']);
     Route::delete('{id}/update', [SingerController::class, 'destroy']);
 
@@ -79,7 +79,7 @@ Route::prefix('singers')->group(function(){
 Route::prefix('authors')->group(function(){
     Route::get('', [AuthorController::class, 'index']);
     Route::post('create', [AuthorController::class, 'store']);
-    Route::get('detail', [AuthorController::class, 'show']);
+    Route::get('{id}/detail', [AuthorController::class, 'show']);
     Route::put('{id}/update', [AuthorController::class, 'update']);
     Route::delete('{id}/delete', [AuthorController::class, 'destroy']);
 

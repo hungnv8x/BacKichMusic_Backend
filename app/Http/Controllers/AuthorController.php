@@ -31,7 +31,7 @@ class AuthorController extends Controller
     }
 
 
-    public function show(Author $author)
+    public function show($id)
     {
         $author = $this->authorRepository->getById($id);
         return response()->json($author,200);
@@ -41,7 +41,7 @@ class AuthorController extends Controller
 
 
 
-    public function update(Request $request, Author $author)
+    public function update(Request $request, $id)
     {
         $this->authorRepository->update($request,$id);
         return response()->json([

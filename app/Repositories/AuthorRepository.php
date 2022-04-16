@@ -27,12 +27,12 @@ class AuthorRepository extends BaseRepository
     public function update($request,$id)
     {
         $author = Author::find($id);
-        $author->name = $singer->name;
-        $author->avatar = $singer->avatar;
-        $author->gender = $request->gender;
-        $author->date_of_birth = $request->date_of_birth;
-        $author->biography = $request->biography;
-        $author->information = $request->information;
+        $author->name = $request->name??$author->name;
+        $author->avatar = $request->avatar??$author->avatar;
+        $author->gender = $request->gender??$author->gender;
+        $author->date_of_birth = $request->date_of_birth??$author->date_of_birth;
+        $author->biography = $request->biography??$author->biography;
+        $author->information = $request->information??$author->information;
         $author->save();
 
     }
