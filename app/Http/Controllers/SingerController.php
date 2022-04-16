@@ -34,24 +34,29 @@ class SingerController extends Controller
 
     public function show(Singer $singer)
     {
-
+        $singer = $this->singerRepository->getById($id);
+        return response()->json($singer,200);
     }
 
-
-    public function edit(Singer $singer)
-    {
-        //
-    }
 
 
     public function update(Request $request, Singer $singer)
     {
-        //
+        $this->singerRepository->update($request,$id);
+        return response()->json([
+            'message' => "Successfully updated",
+            'success' => true
+        ], 200);
     }
 
 
     public function destroy(Singer $singer)
     {
-        //
+        $this->singerRepository->deleteById($id);
+        return response()->json([
+            'message' => "Successfully deleted",
+            'success' => true
+        ], 200);
+
     }
 }
