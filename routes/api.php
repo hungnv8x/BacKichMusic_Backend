@@ -8,6 +8,7 @@ use App\Http\Controllers\SongController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SingerController;
+use App\Http\Controllers\AuthorController;
 
 
 /*
@@ -69,10 +70,22 @@ Route::prefix('categories')->group(function () {
 Route::prefix('singers')->group(function(){
     Route::get('', [SingerController::class, 'index'])->name('singer.index');
     Route::post('create', [SingerController::class, 'store'])->name('singer.create');
+    Route::get('{id}/detail', [SingerController::class, 'show']);
     Route::put('{id}/update', [SingerController::class, 'update']);
     Route::delete('{id}/update', [SingerController::class, 'destroy']);
 
 });
+
+Route::prefix('authors')->group(function(){
+    Route::get('', [AuthorController::class, 'index']);
+    Route::post('create', [AuthorController::class, 'store']);
+    Route::get('{id}/detail', [AuthorController::class, 'show']);
+    Route::put('{id}/update', [AuthorController::class, 'update']);
+    Route::delete('{id}/delete', [AuthorController::class, 'destroy']);
+
+});
+
+
 
 Route::prefix('songs')->group(function () {
     Route::get('',[SongController::class, 'index'])->name('category.index');
