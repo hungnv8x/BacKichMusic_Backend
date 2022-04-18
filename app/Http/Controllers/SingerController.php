@@ -6,12 +6,16 @@ use App\Models\Singer;
 use Illuminate\Http\Request;
 use App\Http\Requests\SingerRequest;
 use App\Repositories\SingerRepository;
+use App\Repositories\CategoryRepository;
 
 class SingerController extends Controller
 {
     public $singerRepository;
-    public function __construct(SingerRepository $singerRepository){
+    public $categoryRepository;
+    public function __construct(SingerRepository $singerRepository,
+                                CategoryRepository $categoryRepository){
        $this->singerRepository= $singerRepository;
+       $this->categoryRepository= $categoryRepository;
     }
 
     public function index()
@@ -23,16 +27,18 @@ class SingerController extends Controller
 
     public function store(Request $request)
     {
+        $categories = $this->categoryRepository->getAll();
         $this->singerRepository->store($request);
         return response()->json([
             'message' => "Successfully created",
-            'success' => true
+            'success' => true,
+            $categories
         ], 200);
 
     }
 
 
-    public function show(Singer $singer)
+    public function show($id)
     {
         $singer = $this->singerRepository->getById($id);
         return response()->json($singer,200);
@@ -42,15 +48,17 @@ class SingerController extends Controller
 
     public function update(Request $request, $id)
     {
+        $categories = $this->categoryRepository->getAll();
         $this->singerRepository->update($request,$id);
         return response()->json([
             'message' => "Successfully updated",
-            'success' => true
+            'success' => true,
+            $categories
         ], 200);
     }
 
 
-    public function destroy(Singer $singer)
+    public function destroy($id)
     {
         $this->singerRepository->deleteById($id);
         return response()->json([
