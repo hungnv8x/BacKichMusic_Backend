@@ -30,7 +30,7 @@ class CreateSongsTable extends Migration
             $table->string('description')->nullable();
             $table->date('posting_date')->nullable();
             $table->string('link')->nullable();
-            $table->string('image')->nullable();
+            $table->string('image')->nullable()->default('https://www.iphonefaq.org/files/styles/large/public/apple_music.jpg?itok=nqYGxWgh');
             $table->integer('like')->nullable();
             $table->integer('view')->nullable();
 

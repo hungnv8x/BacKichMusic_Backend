@@ -17,6 +17,7 @@ class CreateCommentsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->string('avatar')->nullable()->default('https://i.stack.imgur.com/l60Hf.png');
             $table->unsignedBigInteger('song_id');
             $table->foreign('song_id')->references('id')->on('songs');
             $table->string('content');
