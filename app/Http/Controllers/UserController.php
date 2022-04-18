@@ -2,30 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\SongRequest;
-use App\Models\Song;
-use App\Repositories\SongRepository;
+use App\Http\Requests\UserRequest;
+use App\Models\User;
+use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 
 
-class SongController extends Controller
+class UserController extends Controller
 {
-    public $songRepository;
-    public function __construct(SongRepository $songRepository)
+    public $userRepository;
+    public function __construct(UserRepository $userRepository)
     {
-        $this->songRepository = $songRepository;
+        $this->userRepository = $userRepository;
 
 
     }
     public function index()
     {
-        $songs = $this->songRepository->getAll();
-        return response()->json($songs,200);
+        $users = $this->userRepository->getAll();
+        return response()->json($users,200);
     }
 
     public function store(Request $request)
     {
-        $this->songRepository->store($request);
+        $this->userRepository->store($request);
         return response()->json([
             'message' => "Successfully created",
             'success' => true
@@ -33,14 +33,14 @@ class SongController extends Controller
     }
     public function show($id)
     {
-        $song = $this->songRepository->getById($id);
-        return response()->json($song,200);
+        $user = $this->userRepository->getById($id);
+        return response()->json($user,200);
 
     }
 
     public function update(Request $request, $id)
     {
-        $this->songRepository->update($request,$id);
+        $this->userRepository->update($request,$id);
         return response()->json([
             'message' => "Successfully updated",
             'success' => true
@@ -51,7 +51,7 @@ class SongController extends Controller
 
     public function destroy($id)
     {
-        $this->songRepository->deleteById($id);
+        $this->userRepository->deleteById($id);
         return response()->json([
             'message' => "Successfully deleted",
             'success' => true

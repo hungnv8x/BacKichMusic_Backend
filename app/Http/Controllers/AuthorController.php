@@ -4,82 +4,60 @@ namespace App\Http\Controllers;
 
 use App\Models\Author;
 use Illuminate\Http\Request;
+use App\Http\Requests\AuthorRequest;
+use App\Repositories\AuthorRepository;
 
 class AuthorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public $authorRepository;
+    public function __construct(AuthorRepository $authorRepository){
+        $this->authorRepository= $authorRepository;
+     }
+
     public function index()
     {
-        //
+        $authors = $this->authorRepository->getAll();
+        return response()->json($authors, 200);
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $this->authorRepository->store($request);
+        return response()->json([
+            'message' => "Successfully created",
+            'success' => true
+        ], 200);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Author  $author
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Author $author)
+
+    public function show($id)
     {
-        //
+        $author = $this->authorRepository->getById($id);
+        return response()->json($author,200);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Author  $author
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Author $author)
+
+
+
+
+    public function update(Request $request, $id)
     {
-        //
+        $this->authorRepository->update($request,$id);
+        return response()->json([
+            'message' => "Successfully updated",
+            'success' => true
+        ], 200);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Author  $author
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Author $author)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Author  $author
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Author $author)
     {
-        //
+        $this->authorRepository->deleteById($id);
+        return response()->json([
+            'message' => "Successfully deleted",
+            'success' => true
+        ], 200);
+
     }
 }

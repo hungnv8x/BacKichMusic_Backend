@@ -16,6 +16,7 @@ class CreateAlbumsTable extends Migration
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('image')->nullable();
             $table->unsignedBigInteger('singer_id');
             $table->foreign('singer_id')->references('id')->on('singers');
             $table->unsignedBigInteger('category_id');
