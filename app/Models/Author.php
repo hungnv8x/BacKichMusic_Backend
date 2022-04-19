@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Author extends Model
 {
     use HasFactory;
+    public function song()
+    {
+        return $this->hasMany(Song::class);
+    }
+
+
 }
