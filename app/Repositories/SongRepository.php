@@ -28,6 +28,7 @@ class SongRepository extends BaseRepository
         $song->description = $request->desciption;
         $song->image = $request->image;
         $song->like = rand(10000,90000);
+        $song->view = rand(10000,90000);
         $song->posting_date = Carbon::now();
 
         $song->save();
@@ -48,6 +49,7 @@ class SongRepository extends BaseRepository
         $song->description = $request->desciption;
         $song->image = $request->image;
         $song->like = $request->like;
+        $song->view= $request->view;
         $song->save();
 
     }
