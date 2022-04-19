@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Like extends Model
 {
     use HasFactory;
+
+    public function song()
+    {
+        return $this->belongsTo(Song::class);
+    }
+
+    public function playlist()
+    {
+        return $this->belongsTo(Playlist::class);
+    }
 }
