@@ -91,8 +91,9 @@ Route::prefix('authors')->group(function(){
 
 Route::prefix('songs')->group(function () {
     Route::get('',[SongController::class, 'index']);
-    Route::get('top10',[SongController::class, 'getTop10']);
+    Route::get('topview',[SongController::class, 'getTopView']);
     Route::get('topnew',[SongController::class, 'getTopNew']);
+    Route::get('toplike',[SongController::class, 'getTopLike']);
     Route::get('create',[SongController::class, 'create'])->name('category.showFormCreate');
     Route::post('create',[SongController::class, 'store'])->name('category.create');
     Route::get('{id}/update',[SongController::class, 'edit'])->name('category.showFormUpdate');
