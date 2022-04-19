@@ -4,82 +4,75 @@ namespace App\Http\Controllers;
 
 use App\Models\Album;
 use Illuminate\Http\Request;
+use App\Http\Requests\AlbumRequest;
+use App\Repositories\AlbumRepository;
+use App\Repositories\SingerRepository;
+use App\Repositories\CategoryRepository;
 
 class AlbumController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public $albumRepository;
+    public $categoryRepository;
+    public $singerRepository;
+    public function __construct(AlbumRepository $albumRepository,
+                                CategoryRepository $categoryRepository,
+                                SingerRepository $singerRepository){
+       $this->albumRepository= $albumRepository;
+       $this->categoryRepository= $categoryRepository;
+       $this->singerRepository= $singerRepository;
+    }
+
     public function index()
     {
-        //
+        $albums = $this->albumRepository->getAll();
+        return response()->json($albums, 200);
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $categories = $this->categoryRepository->getAll();
+        $singers = $this->singerRepository->getAll();
+        $this->albumRepository->store($request);
+        return response()->json([
+            'message' => "Successfully created",
+            'success' => true,
+            $categories,
+            $singers
+        ], 200);
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Album  $album
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Album $album)
+
+    public function show($id)
     {
-        //
+        $album = $this->albumRepository->getById($id);
+        return response()->json($album,200);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Album  $album
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Album $album)
+
+
+    public function update(Request $request, $id)
     {
-        //
+        $categories = $this->categoryRepository->getAll();
+        $singers = $this->singerRepository->getAll();
+        $this->albumRepository->update($request,$id);
+        return response()->json([
+            'message' => "Successfully updated",
+            'success' => true,
+            $categories,
+            $singers
+        ], 200);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Album  $album
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Album $album)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Album  $album
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Album $album)
+    public function destroy($id)
     {
-        //
+        $this->albumRepository->deleteById($id);
+        return response()->json([
+            'message' => "Successfully deleted",
+            'success' => true
+        ], 200);
+
     }
 }

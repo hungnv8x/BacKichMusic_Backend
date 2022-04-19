@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\Song;
 use http\Env\Request;
+use Illuminate\Support\Facades\DB;
 
 class SongRepository extends BaseRepository
 {
@@ -39,6 +40,15 @@ class SongRepository extends BaseRepository
         // $song->description = $request->name;
         // $song->parent_id = $request->parent_id;
         $song->save();
+    }
+    public function getTopView(){
+        return  DB::table($this->table)->orderBy('view','desc')->limit(8)->get();
+    }
+    public function getTopLike(){
+        return  DB::table($this->table)->orderBy('like','desc')->limit(8)->get();
+    }
+    public function getTopNew(){
+        return  DB::table($this->table)->orderBy('created_at','desc')->limit(8)->get();
     }
 
 }
