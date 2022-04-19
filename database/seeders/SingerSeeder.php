@@ -33,5 +33,6 @@ class SingerSeeder extends Seeder
         $singer->name = "Tuan Hung";
         $singer->category_id = 4;
         $singer->save();
+
     }
 }
