@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             CommentSeeder::class,
             PlaylistSeeder::class,
             PlaylistSongSeeder::class,
+            LikeSeeder::class,
         ]);
     }
 }

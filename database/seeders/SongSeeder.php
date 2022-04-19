@@ -21,6 +21,8 @@ class SongSeeder extends Seeder
         $song->author_id = '1';
         $song->album_id = '1';
         $song->user_id = '1';
+        $song->description = 'Nam chat vao nhe';
+
         $song->save();
 
         $song = new Song();
@@ -30,6 +32,8 @@ class SongSeeder extends Seeder
         $song->author_id = '2';
         $song->album_id = '2';
         $song->user_id = '2';
+        $song->description = 'minh lai oanh nhau';
+        
         $song->save();
 
         $song = new Song();
@@ -39,6 +43,7 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->description = 'Mat to nhe';
         $song->save();
 
 
