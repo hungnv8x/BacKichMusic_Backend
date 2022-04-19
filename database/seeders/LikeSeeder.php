@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Like;
 use Illuminate\Database\Seeder;
 
 class LikeSeeder extends Seeder
@@ -13,6 +14,20 @@ class LikeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $like = new Like;
+        $like->playlist_id = 1;
+        $like->song_id = 1;
+        $like->save();
+
+        $like = new Like;
+        $like->playlist_id = 2;
+        $like->song_id = 2;
+        $like->save();
+
+        $like = new Like;
+        $like->playlist_id = 1;
+        $like->song_id = 2;
+        $like->save();
+
     }
 }
