@@ -54,7 +54,6 @@ class SongSeeder extends Seeder
         Thì đôi ta cũng sẽ không xa rời';
         $song->like = 1224;
         $song->view =784236;
-        // $song->posting_date = 2022/04/02;
         $song->save();
 
         $song = new Song();
@@ -112,8 +111,6 @@ class SongSeeder extends Seeder
         Uhm';
         $song->like = 1234;
         $song->view =784236;
-        // $song->posting_date = 2022/05/02;
-
         $song->save();
 
         $song = new Song();
@@ -161,7 +158,6 @@ class SongSeeder extends Seeder
         Thời gian quay trở lại người anh yêu vẫn chỉ là em';
         $song->like = 1234;
         $song->view =783236;
-        // $song->posting_date = 2022/04/02;
         $song->save();
 
         $song = new Song();
@@ -209,8 +205,6 @@ class SongSeeder extends Seeder
         노래 끝! 오예!';
         $song->like = 134;
         $song->view =783246;
-        // $song->posting_date = 2022/04/03;
-
         $song->save();
 
         $song = new Song();
@@ -242,8 +236,6 @@ class SongSeeder extends Seeder
         And then no more little ducks came back';
         $song->like = 1224;
         $song->view =783636;
-        // $song->posting_date = 2021/04/02;
-
         $song->save();
 
         $song = new Song();
@@ -264,8 +256,6 @@ class SongSeeder extends Seeder
         Home sweet home 아늑하다';
         $song->like = 1234;
         $song->view =783231;
-        // $song->posting_date = 2022/04/01;
-
         $song->save();
 
         $song = new Song();
@@ -283,8 +273,6 @@ class SongSeeder extends Seeder
         Are we an item? Girl, quit playin';
         $song->like = 1234;
         $song->view =783236;
-        // $song->posting_date = 2022/02/02;
-
         $song->save();
 
         $song = new Song();
@@ -352,8 +340,6 @@ class SongSeeder extends Seeder
         Người ở tôi về';
         $song->like = 1234;
         $song->view =783236;
-        // $song->posting_date = 2021/04/02;
-
         $song->save();
 
         $song = new Song();
@@ -418,7 +404,6 @@ class SongSeeder extends Seeder
         Mình tay trong tay';
         $song->like = 1234;
         $song->view =783236;
-        // $song->posting_date = 2022/03/02;
          $song->save();
 
         $song = new Song();
