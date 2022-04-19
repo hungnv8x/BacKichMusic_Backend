@@ -63,5 +63,11 @@ class SongRepository extends BaseRepository
     public function getTopNew(){
         return  DB::table($this->table)->orderBy('created_at','desc')->limit(8)->get();
     }
+    public function getSongBySinger($id){
+        return  DB::table($this->table)->where('singer_id',$id)->get();
+    }
+    public function getSongByCategory($id){
+        return  DB::table($this->table)->where('category_id',$id)->get();
+    }
 
 }

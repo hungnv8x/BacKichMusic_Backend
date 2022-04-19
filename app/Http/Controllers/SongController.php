@@ -37,6 +37,16 @@ class SongController extends Controller
         // dd($songs);
         return response()->json($songs,200);
     }
+    public function getSongBySinger($id){
+        $songs = $this->songRepository->getSongBySinger($id);
+        // dd($songs);
+        return response()->json($songs,200);
+    }
+    public function getSongByCategory($id){
+        $songs = $this->songRepository->getSongByCategory($id);
+        // dd($songs);
+        return response()->json($songs,200);
+    }
 
     public function store(Request $request)
     {
