@@ -27,7 +27,7 @@ class CreateSongsTable extends Migration
             $table->foreign('album_id')->references('id')->on('albums');
 
             $table->string('name');
-            $table->string('description')->nullable();
+            $table->longtext('description')->nullable();
             $table->date('posting_date')->nullable();
             $table->string('link')->nullable();
             $table->string('image')->nullable()->default('https://www.iphonefaq.org/files/styles/large/public/apple_music.jpg?itok=nqYGxWgh');
