@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 
+use Carbon\Carbon;
 use App\Models\Song;
 use http\Env\Request;
 use Illuminate\Support\Facades\DB;
@@ -25,9 +26,12 @@ class SongRepository extends BaseRepository
         $song->user_id = $request->user_id;
 
         $song->name = $request->name;
+        $song->description = $request->desciption;
         $song->image = $request->image;
-        // $song->description = $request->name;
-        // $song->parent_id = $request->parent_id;
+        $song->like = rand(10000,90000);
+        $song->view = rand(10000,90000);
+        $song->posting_date = Carbon::now();
+
         $song->save();
 
     }
@@ -36,10 +40,19 @@ class SongRepository extends BaseRepository
     {
         $song = song::find($id);
 
+        $song->album_id = $request->album_id;
+        $song->category_id = $request->category_id;
+        $song->singer_id = $request->singer_id;
+        $song->author_id = $request->author_id;
+        $song->user_id = $request->user_id;
+
         $song->name = $request->name;
-        // $song->description = $request->name;
-        // $song->parent_id = $request->parent_id;
+        $song->description = $request->desciption;
+        $song->image = $request->image;
+        $song->like = $request->like;
+        $song->view= $request->view;
         $song->save();
+
     }
     public function getTopView(){
         return  DB::table($this->table)->orderBy('view','desc')->limit(8)->get();

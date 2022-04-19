@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -17,14 +18,15 @@ class UserSeeder extends Seeder
         $user = new User();
         $user->name = "Duc";
         $user->email = "Duc@gmail.com";
-        $user->password = '123456';
+        $user->password = Hash::make('123456');
         $user->role_id = 1;
         $user->save();
 
         $user = new User();
         $user->name = "Nhung";
-        $user->email = "Nhung@gmail.com";
+        $user->email = "nhung@gmail.com";
         $user->role_id = 1;
+        $user->password = Hash::make('123456');
         $user->save();
 
         $user = new User();
