@@ -27,7 +27,7 @@ class SongSeeder extends Seeder
         $song->save();
 
         $song = new Song();
-        $song->name = "Muon roi ma sao con";
+        $song->name = 'Muon roi ma sao con';
         $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335327710?alt=media&token=b2faf971-61a0-40a2-aec1-515ad7381551';
         $song->singer_id = 1;
         $song->category_id = 1;
