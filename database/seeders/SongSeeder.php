@@ -78,6 +78,7 @@ class SongSeeder extends Seeder
         $song->author_id = '1';
         $song->album_id = '1';
         $song->user_id = '1';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335327710?alt=media&token=b2faf971-61a0-40a2-aec1-515ad7381551';
         $song->description = 'Ngày ta sánh đôi hạnh phúc nói cười
         Thì em yêu ơi xin em hãy cứ tin
         Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
@@ -123,6 +124,7 @@ class SongSeeder extends Seeder
         $song->author_id = '1';
         $song->album_id = '1';
         $song->user_id = '1';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
         $song->description = 'Ngày ta sánh đôi hạnh phúc nói cười
         Thì em yêu ơi xin em hãy cứ tin
         Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
@@ -168,6 +170,7 @@ class SongSeeder extends Seeder
         $song->album_id = '2';
         $song->user_id = '2';
         $song->description = 'minh lai oanh nhau';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335327710?alt=media&token=b2faf971-61a0-40a2-aec1-515ad7381551';
 
 
         $song->description = 'Sau tất cả mình lại trở về với nhau
@@ -232,6 +235,8 @@ class SongSeeder extends Seeder
         $song->author_id = '2';
         $song->album_id = '2';
         $song->user_id = '2';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
+
         $song->description = 'Ngày ta sánh đôi hạnh phúc nói cười
         Thì em yêu ơi xin em hãy cứ tin
         Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
@@ -276,6 +281,7 @@ class SongSeeder extends Seeder
         $song->author_id = '2';
         $song->album_id = '2';
         $song->user_id = '2';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335305092?alt=media&token=a0637f86-43f3-4f99-a58f-09018e6c2b00';
         $song->description = 'Ngày ta sánh đôi hạnh phúc nói cười
         Thì em yêu ơi xin em hãy cứ tin
         Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
@@ -320,6 +326,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335327710?alt=media&token=b2faf971-61a0-40a2-aec1-515ad7381551';
+
         $song->description = 'Chỉ còn anh lang thang chốn cũ
         Lòng quặn đau nước mắt ướt nhoà
         Chẳng thể nào biết được liệu mai sau có thể gặp lại nữa
@@ -369,6 +377,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
+
         $song->description = '아기 상어 뚜루루 뚜루
         귀여운 뚜루루 뚜루
         바닷속 뚜루루 뚜루
@@ -418,6 +428,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335305092?alt=media&token=a0637f86-43f3-4f99-a58f-09018e6c2b00';
+
         $song->description = 'Five little ducks went swimming one day
         Over the hills and far away
         The little duck said, "Quack, quack, quack, quack"
@@ -451,6 +463,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
+
         $song->description = 'A-yo Choice drop it on me
         Yo 밤은 깊었는데 잠은 안오고
         늘어난 두통과 싸우고
@@ -473,6 +487,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335305092?alt=media&token=a0637f86-43f3-4f99-a58f-09018e6c2b00';
+
         $song->description = 'Oh whoa, oh whoa, oh whoa
         You know you love me, I know you care
         Just shout whenever and Ill be there
@@ -492,6 +508,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335327710?alt=media&token=b2faf971-61a0-40a2-aec1-515ad7381551';
+
         $song->description = 'Lâu nay chưa gặp nhau đấy
         Hay ta quên số nhau vậy?
         Nghe đâu lúc này bận lắm
@@ -561,6 +579,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
+
         $song->description = 'Chiều nay trên phố chợt có cơn mưa bay
         Giọt mưa vội vã nhẹ rơi mắt người
         Mưa có vui như em và anh
@@ -627,6 +647,8 @@ class SongSeeder extends Seeder
         $song->author_id = '2';
         $song->album_id = '2';
         $song->user_id = '2';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335305092?alt=media&token=a0637f86-43f3-4f99-a58f-09018e6c2b00';
+
         $song->description = 'Năm anh em trên một chiếc xe tăng
         Như năm bông hoa nở cùng một cội
         Như năm ngón tay trên một bàn tay
@@ -661,6 +683,8 @@ class SongSeeder extends Seeder
         $song->author_id = '2';
         $song->album_id = '2';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335327710?alt=media&token=b2faf971-61a0-40a2-aec1-515ad7381551';
+
         $song->description = 'Em, ngày em đánh rơi nụ cười vào anh
         Có nghĩ sau này em sẽ chờ
         Và vô tư cho đi hết những ngây thơ
@@ -713,6 +737,8 @@ class SongSeeder extends Seeder
         $song->author_id = '1';
         $song->album_id = '1';
         $song->user_id = '1';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
+
         $song->description = 'Khi đôi môi em còn đỏ mọng
         Em muốn nói em yêu anh
         Khi men còn trong hơi thở
@@ -770,6 +796,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
+
         $song->description = 'Ngày ta sánh đôi hạnh phúc nói cười
         Thì em yêu ơi xin em hãy cứ tin
         Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
@@ -814,6 +842,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335327710?alt=media&token=b2faf971-61a0-40a2-aec1-515ad7381551';
+
         $song->description = 'Ngày ta sánh đôi hạnh phúc nói cười
         Thì em yêu ơi xin em hãy cứ tin
         Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
