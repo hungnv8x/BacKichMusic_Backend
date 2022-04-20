@@ -22,6 +22,13 @@ class AlbumRepository extends BaseRepository
         ->get();
     }
 
+    public function getById($id)
+    {
+        return DB::table($this->table)->join('categories', 'albums.category_id', '=', 'categories.id')
+        ->join('singers', 'albums.singer_id', '=', 'singers.id')
+        ->select('albums.*', 'categories.name as category', 'singers.name as singer')->where('singers.id',$id)->first();
+    }
+
     public function store($request)
     {
         $album = new Album();

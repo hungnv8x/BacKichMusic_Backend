@@ -26,6 +26,20 @@ class SongRepository extends BaseRepository
         ->get();
     }
 
+    public function getById($id)
+    {
+        return DB::table('songs')->join('categories', 'songs.category_id', '=', 'categories.id')
+        ->join('singers', 'songs.singer_id', '=', 'singers.id')
+        ->join('authors', 'songs.author_id', '=', 'authors.id')
+        ->join('users', 'songs.user_id', '=', 'users.id')
+        ->join('albums', 'songs.album_id', '=', 'albums.id')
+        ->select('songs.*', 'categories.name as category', 'singers.name as singer', 'authors.name as author', 'albums.name as album', 'users.name as user')
+        ->where('songs.id',$id)->first();
+
+    }
+
+
+
     public function store($request)
     {
         $song = new Song();

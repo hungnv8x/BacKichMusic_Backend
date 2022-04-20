@@ -21,6 +21,13 @@ class SingerRepository extends BaseRepository
 
     }
 
+    public function getById($id)
+    {
+        return DB::table('singers')->join('categories', 'singers.category_id', '=', 'categories.id')
+        ->select('singers.*', 'categories.name as category')->where('singers.id',$id)->first();
+
+    }
+
     public function store($request)
     {
         $singer = new Singer();
