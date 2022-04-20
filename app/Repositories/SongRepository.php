@@ -22,7 +22,7 @@ class SongRepository extends BaseRepository
         ->join('authors', 'songs.author_id', '=', 'authors.id')
         ->join('users', 'songs.user_id', '=', 'users.id')
         ->join('albums', 'songs.album_id', '=', 'albums.id')
-        ->select('singers.*', 'categories.name as category', 'singers.name as singer', 'authors.name as author', 'albums.name as album', 'users.name as user')
+        ->select('songs.*', 'categories.name as category', 'singers.name as singer', 'authors.name as author', 'albums.name as album', 'users.name as user')
         ->get();
     }
 
