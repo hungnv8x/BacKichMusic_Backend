@@ -53,8 +53,8 @@ class SongRepository extends BaseRepository
         $song->name = $request->name;
         $song->description = $request->desciption;
         $song->image = $request->image;
-        $song->like = rand(10000,90000);
-        $song->view = rand(10000,90000);
+        $song->like = 0;
+        $song->view = 0;
         $song->posting_date = Carbon::now();
 
         $song->save();
@@ -95,7 +95,7 @@ class SongRepository extends BaseRepository
         ->join('users', 'songs.user_id', '=', 'users.id')
         ->join('albums', 'songs.album_id', '=', 'albums.id')
         ->select('songs.*', 'categories.name as category', 'singers.name as singer', 'authors.name as author', 'albums.name as album', 'users.name as user')
-        ->orderBy('like','desc')->limit(8)->get();
+        ->orderBy('like','desc')->limit(4)->get();
     }
     public function getTopNew(){
         return  DB::table($this->table)->join('categories', 'songs.category_id', '=', 'categories.id')

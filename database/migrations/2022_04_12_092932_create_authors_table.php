@@ -16,10 +16,10 @@ class CreateAuthorsTable extends Migration
         Schema::create('authors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('avatar')->nullable()->default('https://i.stack.imgur.com/l60Hf.png');
+            $table->text('avatar')->nullable();
             $table->string('gender')->nullable();
             $table->date('date_of_birth')->nullable();
-            $table->string('biography')->nullable();
+            $table->longText('biography')->nullable();
             $table->string('information')->nullable();
             $table->timestamps();
         });

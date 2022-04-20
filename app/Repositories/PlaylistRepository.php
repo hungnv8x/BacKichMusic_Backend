@@ -39,8 +39,8 @@ class PlaylistRepository extends BaseRepository
         $playlist->description = $request->desciption;
         $playlist->image = $request->image;
         $playlist->quantity = $request->quantity;
-        $playlist->view = rand(10000,90000);
-        $playlist->like = rand(10000,90000);
+        $playlist->view = 0;
+        $playlist->like = 0;
         $playlist->posting_date = Carbon::now();
         $playlist->final_update = Carbon::now();
         $playlist->save();
@@ -55,16 +55,12 @@ class PlaylistRepository extends BaseRepository
         $playlist->description = $request->desciption;
         $playlist->image = $request->image;
         $playlist->quantity = $request->quantity;
-        $playlist->view = rand(10000,90000);
-        $playlist->like = rand(10000,90000);
+        $playlist->view = $request->view;
+        $playlist->like = $request->like;
         $playlist->final_update = Carbon::now();
         $playlist->save();
 
     }
-
-
-
-
 
 }
 

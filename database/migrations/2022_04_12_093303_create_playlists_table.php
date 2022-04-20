@@ -20,7 +20,7 @@ class CreatePlaylistsTable extends Migration
             $table->string('name');
             $table->string('image')->nullable();
 
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->integer('quantity')->nullable();
             $table->date('posting_date')->nullable();
             $table->date('final_update')->nullable();
