@@ -2,82 +2,57 @@
 
 namespace App\Http\Controllers;
 
+// use PlaylistRepository;
 use App\Models\Playlist;
+use App\Repositories\PlaylistRepository;
 use Illuminate\Http\Request;
 
 class PlaylistController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public $playlistRepository;
+    public function __construct(PlaylistRepository $playlistRepository)
     {
-        //
+        $this->playlistReporitory = $playlistRepository;
+
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function index()
+    {
+        $playlists = $this->playlistRepository->getAll();
+        return response()->json($playlists, 200);
+    }
+
+
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Playlist  $playlist
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Playlist $playlist)
+
+    public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Playlist  $playlist
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(Playlist $playlist)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Playlist  $playlist
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, Playlist $playlist)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Playlist  $playlist
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Playlist $playlist)
     {
         //

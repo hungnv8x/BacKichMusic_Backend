@@ -6,9 +6,11 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SongController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\SingerController;
+use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\SingerController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PlaylistController;
 
 
 /*
@@ -86,9 +88,6 @@ Route::prefix('authors')->group(function(){
 });
 
 
-
-
-
 Route::prefix('songs')->group(function () {
     Route::get('',[SongController::class, 'index']);
     Route::get('topview',[SongController::class, 'getTopView']);
@@ -106,5 +105,22 @@ Route::prefix('songs')->group(function () {
     Route::delete('{id}/delete',[SongController::class, 'destroy'])->name('category.delete');
 });
 
+Route::prefix('albums')->group(function(){
+    Route::get('', [AlbumController::class, 'index']);
+    Route::post('create', [AlbumController::class, 'store']);
+    Route::get('{id}/detail', [AlbumController::class, 'show']);
+    Route::put('{id}/update', [AlbumController::class, 'update']);
+    Route::delete('{id}/update', [AlbumController::class, 'destroy']);
+
+});
+
+Route::prefix('playlists')->group(function(){
+    Route::get('', [PlaylistController::class, 'index']);
+    Route::post('create', [PlaylistController::class, 'store']);
+    Route::get('{id}/detail', [PlaylistController::class, 'show']);
+    Route::put('{id}/update', [PlaylistController::class, 'update']);
+    Route::delete('{id}/update', [PlaylistController::class, 'destroy']);
+
+});
 
 
