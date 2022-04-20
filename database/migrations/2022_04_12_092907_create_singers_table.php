@@ -18,10 +18,10 @@ class CreateSingersTable extends Migration
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->string('name');
-            $table->string('avatar')->nullable()->default('https://i.stack.imgur.com/l60Hf.png');
+            $table->text('avatar')->nullable();
             $table->string('gender')->nullable();
             $table->date('date_of_birth')->nullable();
-            $table->string('biography')->nullable();
+            $table->text('biography')->nullable();
             $table->string('band')->nullable();
             $table->string('hit')->nullable();
             $table->string('information')->nullable();
