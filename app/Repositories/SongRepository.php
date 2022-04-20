@@ -66,19 +66,49 @@ class SongRepository extends BaseRepository
 
     }
     public function getTopView(){
-        return  DB::table($this->table)->orderBy('view','desc')->limit(8)->get();
+        return  DB::table($this->table)->join('categories', 'songs.category_id', '=', 'categories.id')
+        ->join('singers', 'songs.singer_id', '=', 'singers.id')
+        ->join('authors', 'songs.author_id', '=', 'authors.id')
+        ->join('users', 'songs.user_id', '=', 'users.id')
+        ->join('albums', 'songs.album_id', '=', 'albums.id')
+        ->select('songs.*', 'categories.name as category', 'singers.name as singer', 'authors.name as author', 'albums.name as album', 'users.name as user')
+        ->orderBy('view','desc')->limit(8)->get();
     }
     public function getTopLike(){
-        return  DB::table($this->table)->orderBy('like','desc')->limit(8)->get();
+        return  DB::table($this->table)->join('categories', 'songs.category_id', '=', 'categories.id')
+        ->join('singers', 'songs.singer_id', '=', 'singers.id')
+        ->join('authors', 'songs.author_id', '=', 'authors.id')
+        ->join('users', 'songs.user_id', '=', 'users.id')
+        ->join('albums', 'songs.album_id', '=', 'albums.id')
+        ->select('songs.*', 'categories.name as category', 'singers.name as singer', 'authors.name as author', 'albums.name as album', 'users.name as user')
+        ->orderBy('like','desc')->limit(8)->get();
     }
     public function getTopNew(){
-        return  DB::table($this->table)->orderBy('created_at','desc')->limit(8)->get();
+        return  DB::table($this->table)->join('categories', 'songs.category_id', '=', 'categories.id')
+        ->join('singers', 'songs.singer_id', '=', 'singers.id')
+        ->join('authors', 'songs.author_id', '=', 'authors.id')
+        ->join('users', 'songs.user_id', '=', 'users.id')
+        ->join('albums', 'songs.album_id', '=', 'albums.id')
+        ->select('songs.*', 'categories.name as category', 'singers.name as singer', 'authors.name as author', 'albums.name as album', 'users.name as user')
+        ->orderBy('created_at','desc')->limit(8)->get();
     }
     public function getSongBySinger($id){
-        return  DB::table($this->table)->where('singer_id',$id)->get();
+        return  DB::table($this->table)->join('categories', 'songs.category_id', '=', 'categories.id')
+        ->join('singers', 'songs.singer_id', '=', 'singers.id')
+        ->join('authors', 'songs.author_id', '=', 'authors.id')
+        ->join('users', 'songs.user_id', '=', 'users.id')
+        ->join('albums', 'songs.album_id', '=', 'albums.id')
+        ->select('songs.*', 'categories.name as category', 'singers.name as singer', 'authors.name as author', 'albums.name as album', 'users.name as user')
+        ->where('singer_id',$id)->get();
     }
     public function getSongByCategory($id){
-        return  DB::table($this->table)->where('category_id',$id)->get();
+        return  DB::table($this->table)->join('categories', 'songs.category_id', '=', 'categories.id')
+        ->join('singers', 'songs.singer_id', '=', 'singers.id')
+        ->join('authors', 'songs.author_id', '=', 'authors.id')
+        ->join('users', 'songs.user_id', '=', 'users.id')
+        ->join('albums', 'songs.album_id', '=', 'albums.id')
+        ->select('songs.*', 'categories.name as category', 'singers.name as singer', 'authors.name as author', 'albums.name as album', 'users.name as user')
+        ->where('category_id',$id)->get();
     }
 
 }
