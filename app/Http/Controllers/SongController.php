@@ -29,12 +29,12 @@ class SongController extends Controller
     }
     public function getTopNew(){
         $songs = $this->songRepository->getTopNew();
-        // dd($songs);
+
         return response()->json($songs,200);
     }
     public function getTopLike(){
         $songs = $this->songRepository->getTopLike();
-        // dd($songs);
+
         return response()->json($songs,200);
     }
     public function getSongBySinger($id){
