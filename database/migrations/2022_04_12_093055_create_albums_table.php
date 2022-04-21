@@ -16,7 +16,7 @@ class CreateAlbumsTable extends Migration
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('image')->nullable()->default('https://www.iphonefaq.org/files/styles/large/public/apple_music.jpg?itok=nqYGxWgh');
+            $table->text('image')->nullable();
             $table->string('link')->nullable();
             $table->unsignedBigInteger('singer_id');
             $table->foreign('singer_id')->references('id')->on('singers');

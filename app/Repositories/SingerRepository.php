@@ -2,13 +2,30 @@
 namespace App\Repositories;
 use App\Models\Singer;
 use http\Env\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class SingerRepository extends BaseRepository
 {
+
     public function getTable()
     {
         return 'singers';
+    }
+    public function getAll()
+    {
+
+        return DB::table('singers')->join('categories', 'singers.category_id', '=', 'categories.id')
+        ->select('singers.*', 'categories.name as category')
+        ->get();
+
+    }
+
+    public function getById($id)
+    {
+        return DB::table('singers')->join('categories', 'singers.category_id', '=', 'categories.id')
+        ->select('singers.*', 'categories.name as category')->where('singers.id',$id)->first();
+
     }
 
     public function store($request)

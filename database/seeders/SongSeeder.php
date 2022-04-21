@@ -65,6 +65,8 @@ class SongSeeder extends Seeder
         Hứa với nhau một câu sẽ đi trọn đến cuối con đường (cuối đường)
         Đến khi tim ngừng đập và đôi chân ngừng đi
         Thì đôi ta cũng sẽ không xa rời';
+        $song->posting_date = '2000/01/23';
+        $song->image = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxETEBAPEQ4QEg8QDxIPEA8PDRAQEA8SFREXFhURFxYYHSggGBolGxMYITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGi0fHx0tLS0tKy0tLS0tLS0rLS0tLSstLS0rLS0tLSstLTctLS0rLSsrLS0tLSstNysrKys3N//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAwUBBAYCB//EADQQAQEAAQIEBAMHAgcBAAAAAAABAgMRBAUhMRJBUXEiMmFSgZGhscHR4fATFSNCYnLxBv/EABgBAQADAQAAAAAAAAAAAAAAAAABAgME/8QAHhEBAQEBAAIDAQEAAAAAAAAAAAECEQMxEiFBMnH/2gAMAwEAAhEDEQA/APoQDtYgAAAAAAAAAAJeG0LnlMJtvfO+SO8EQsdTgNPG+G68mX1x6T369Gvr8FljPFLM8PtYXeT3RNyp5WsAsgAAAAAAAAAAAAAAAAAAAAAAE3CcPc8pjJdvOzynqu+F5bhh1+bL1y8vaKa3MpmeqvhOWZ59b8OPrZ1vtFlo8qxxsymWfill33n8LAYXyaq8zI05wE+LfPPbLK5XGZbTr7JtDhsMJZjjJL3+qYV7U8VfGcplviwsxv2b8v8ARUa+jlhdsptf19nVoeJ4fHOeHKdPL1nsvnyWe0XLlhs8fwl08tu+N+W+v092s6JeswBIAAAAAAAAAAAAAAAAM4422STe27SMLHkmjvncr2wnT3qurydJOrXgOGmnhMfPvlfWtkHJ3rYAAAAABDxfDzPG437r6X1cxq6dxyuN7y7V1qo57odMdSd/ly/a/wB+rXx65eK6inAdDMAAAAAAAAAAAAAAAAdBybR8OnL55Xxfd5KjgOFuplt/tnzX9nS4zabTtOkYeXX4vmfrIDFcAAAAAAaPOZ/pZe+P6t5r8do+PTyxnezp7zrEz2i+nMBZ5XvOmw7GQAAAAAAAAAAAAAAACbhLfHhN7tc5036d3URyWOW1lneXeOq0NTxY45TtZKw80/V8JAGK4AAAAAAxWVfzPiMtPLTzl+HrMsfK9vzTJ36KqeO1/Fld9OY5y7ZWXvt9Gsk4nOXPPKdrlbPxRurM5GNAFgAAAAAAAAAAAAAAX3LdfHHS05ldrlbjj9etUJb+XSK6z8ky8deKrk/G3L4MrvZN8b6z0Wrls5eNJegCEgAAI9fVmONyyvSA92qTnfES5TCf7e/vfJBr8wyyzmXljv4MfKX1+tadvne9b48fL2s9a6ANlQAAAAAAAAAAAAAAAAAEnD61wymU7zfv9Zs3uU8XZnZll0z3u9vbKdd2eD5T4sZllltLN5JOuzb0+T6cu9uWX0tm35Mt6x6WkqwlZBztAHnUxtlku19Z3gPOvr44Y3LK9J+N+kU3NuMmcwmN6dbZ2u/1e+M5ZqW7+Px/9rtZ+zzp8myvfPGfSS1rn4z76peqwS8Vw9wyuN95Z5xE3l6oAJAAAAAAAAAAAAATaPD3LHPKX5JLt6zzQo6ACQX/AAfLMJjLlJllZ137T6bKrl3D3PUx6dMbMsvaV0rDy6/IvmEgDFcAAAAABW8z4DLUyxyxs6Ta72zz6KjieFywsmU79rLvK6lp804fx6d9cfin3d5+DTHks+ldZc4A6WYAAAAAAAAADOEm837bze+k3bHG8HdOzzxvy5Tzay25br454XQz9PhvrPT3imrZ9piDkuX+pcb2yws/v82pxGn4c8sfS2fd5J5o56erjNrbMt5tPmn/AI2eeaHXHUnazw338v7+iOz5f6c+lWCbgtLxamOPlbvfadavbxC95Zw/g059rL4sv4bjDLkt62gAgAAAAAAGKyA5XieHywu2U29Nu1n0RL3nmlvhMvPG/len8KKT6fXo6sa7OsrOUAXQAAAAAAAAPehhbnjjLtblJL6fV4TcHreDPHLyl6+17ovojp8Jdpvd7t1u22/1Y1dOZSzKby95XqVlxtlTnyaeOWXbDznn7SrLHQxll8M3k2l27T0SCbq32jgAhIAAAAAAAAADxracyxuN7WbVWcZ4NHTuGPz5zbe99vO1bKHneltqTLyyn5zp/C/j+7xXSuAdTMAAAAAAAAAB1HA23Twt7+GfoneNLHaSekk/CPbiraAAAAAAAAAAAAAADU5nw/j07J80+LH39G2xUy8vSuRG1zLR8OplPK/FPv8A67tV1y9jEASAAAAAADOPee7ADroy1uX6/j08b57bX3jZcVnGwAAAAAAAAAAAAAAACo5/pfJn7439Z+6nXvPM5/hyedym33KJ0+L+WWvYA0QAAAAAAAAsOS6+2fg8s/ysndfuZ5bltq4X/lt+M2dM5vLPtpj0AM1gAAAAAAAAAAABisoON8X+Hn4btl4btf1BznFauWWduV6y2dO02vaIgdknGIAkAAAAAAAAJfP06rjS51Nviwu/rjZtfxU4rrM17JbF7Oc6f2c/wn8vP+c42yTDK73byUjf5No+LU3vbCeL7+0UvjzJ1aatX8ZBztAAAAAAAAAABVc347aXTxvxXplfSenu9cy5l4d8MOuXa3yx/qo7Wvj8f7VNaAHQoAAAAAAAAAAAALb/AOf76ntj+4M/J/Kc+1yA5moAAAAAAAA859r7UAclAHZGNAEgAAAAAD//2Q==';
         $song->like = 1224;
         $song->view =784236;
         $song->save();
@@ -76,7 +78,45 @@ class SongSeeder extends Seeder
         $song->author_id = '1';
         $song->album_id = '1';
         $song->user_id = '1';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335327710?alt=media&token=b2faf971-61a0-40a2-aec1-515ad7381551';
+        $song->description = 'Ngày ta sánh đôi hạnh phúc nói cười
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Để hứa với nhau một câu sẽ đi trọn tới cuối con đường
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời
+        Ngày ta sánh đôi hạnh phúc nói cười
+        Chỉ mong thế thôi đến tận cuối cùng
+        Từng giây phút trôi ánh mắt rạng ngời
+        Cầm tay bước đi tiếng yêu cất lời
+        Và anh cám ơn cuộc đời này
+        Đã mang em về bên mình để rồi
+        Mỗi sớm mai (mỗi sớm mai)
+        Khi thức dậy anh nói rằng (khi thức dậy)
+        Hãy yêu anh và bên anh người nhé
+        Nắm tay anh thật chặt giữ tay anh thật lâu
+        Hứa với anh một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Để hứa với nhau một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu
+        Hứa với nhau một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Hứa với nhau một câu sẽ đi trọn đến cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời';
+        $song->like = 1224;
+        $song->view =78236;
+        $song->posting_date = '2000/01/23';
+        $song->image = 'data:image/jpeg;base64,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';
+
         $song->save();
+
         $song = new Song();
         $song->name = 'Nam Lay Tay Anh 3';
         $song->singer_id = '1';
@@ -84,8 +124,44 @@ class SongSeeder extends Seeder
         $song->author_id = '1';
         $song->album_id = '1';
         $song->user_id = '1';
-        $song->save();
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
+        $song->description = 'Ngày ta sánh đôi hạnh phúc nói cười
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Để hứa với nhau một câu sẽ đi trọn tới cuối con đường
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời
+        Ngày ta sánh đôi hạnh phúc nói cười
+        Chỉ mong thế thôi đến tận cuối cùng
+        Từng giây phút trôi ánh mắt rạng ngời
+        Cầm tay bước đi tiếng yêu cất lời
+        Và anh cám ơn cuộc đời này
+        Đã mang em về bên mình để rồi
+        Mỗi sớm mai (mỗi sớm mai)
+        Khi thức dậy anh nói rằng (khi thức dậy)
+        Hãy yêu anh và bên anh người nhé
+        Nắm tay anh thật chặt giữ tay anh thật lâu
+        Hứa với anh một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Để hứa với nhau một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu
+        Hứa với nhau một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Hứa với nhau một câu sẽ đi trọn đến cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời';
+        $song->like = 1224;
+        $song->view =7842136;
+        $song->posting_date = '2000/02/23';
+        $song->image = 'data:image/jpeg;base64,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';
 
+        $song->save();
         $song = new Song();
         $song->name = 'Sau Tat Ca';
         $song->singer_id = '2';
@@ -94,6 +170,7 @@ class SongSeeder extends Seeder
         $song->album_id = '2';
         $song->user_id = '2';
         $song->description = 'minh lai oanh nhau';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335327710?alt=media&token=b2faf971-61a0-40a2-aec1-515ad7381551';
 
 
         $song->description = 'Sau tất cả mình lại trở về với nhau
@@ -145,7 +222,12 @@ class SongSeeder extends Seeder
         $song->like = 1234;
         $song->view =784236;
 
+        $song->posting_date = '2002/01/23';
+        $song->image = 'data:image/jpeg;base64,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';
+
+
         $song->save();
+
         $song = new Song();
         $song->name = 'Sau Tat Ca 2';
         $song->singer_id = '2';
@@ -153,6 +235,44 @@ class SongSeeder extends Seeder
         $song->author_id = '2';
         $song->album_id = '2';
         $song->user_id = '2';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
+
+        $song->description = 'Ngày ta sánh đôi hạnh phúc nói cười
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Để hứa với nhau một câu sẽ đi trọn tới cuối con đường
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời
+        Ngày ta sánh đôi hạnh phúc nói cười
+        Chỉ mong thế thôi đến tận cuối cùng
+        Từng giây phút trôi ánh mắt rạng ngời
+        Cầm tay bước đi tiếng yêu cất lời
+        Và anh cám ơn cuộc đời này
+        Đã mang em về bên mình để rồi
+        Mỗi sớm mai (mỗi sớm mai)
+        Khi thức dậy anh nói rằng (khi thức dậy)
+        Hãy yêu anh và bên anh người nhé
+        Nắm tay anh thật chặt giữ tay anh thật lâu
+        Hứa với anh một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Để hứa với nhau một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu
+        Hứa với nhau một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Hứa với nhau một câu sẽ đi trọn đến cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời';
+        $song->like = 1244;
+        $song->view =784236;
+        $song->posting_date = '2002/01/23';
+        $song->image = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxETEBAPEQ4QEg8QDxIPEA8PDRAQEA8SFREXFhURFxYYHSggGBolGxMYITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGi0fHx0tLS0tKy0tLS0tLS0rLS0tLSstLS0rLS0tLSstLTctLS0rLSsrLS0tLSstNysrKys3N//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAwUBBAYCB//EADQQAQEAAQIEBAMHAgcBAAAAAAABAgMRBAUhMRJBUXEiMmFSgZGhscHR4fATFSNCYnLxBv/EABgBAQADAQAAAAAAAAAAAAAAAAABAgME/8QAHhEBAQEBAAIDAQEAAAAAAAAAAAECEQMxEiFBMnH/2gAMAwEAAhEDEQA/APoQDtYgAAAAAAAAAAJeG0LnlMJtvfO+SO8EQsdTgNPG+G68mX1x6T369Gvr8FljPFLM8PtYXeT3RNyp5WsAsgAAAAAAAAAAAAAAAAAAAAAAE3CcPc8pjJdvOzynqu+F5bhh1+bL1y8vaKa3MpmeqvhOWZ59b8OPrZ1vtFlo8qxxsymWfill33n8LAYXyaq8zI05wE+LfPPbLK5XGZbTr7JtDhsMJZjjJL3+qYV7U8VfGcplviwsxv2b8v8ARUa+jlhdsptf19nVoeJ4fHOeHKdPL1nsvnyWe0XLlhs8fwl08tu+N+W+v092s6JeswBIAAAAAAAAAAAAAAAAM4422STe27SMLHkmjvncr2wnT3qurydJOrXgOGmnhMfPvlfWtkHJ3rYAAAAABDxfDzPG437r6X1cxq6dxyuN7y7V1qo57odMdSd/ly/a/wB+rXx65eK6inAdDMAAAAAAAAAAAAAAAAdBybR8OnL55Xxfd5KjgOFuplt/tnzX9nS4zabTtOkYeXX4vmfrIDFcAAAAAAaPOZ/pZe+P6t5r8do+PTyxnezp7zrEz2i+nMBZ5XvOmw7GQAAAAAAAAAAAAAAACbhLfHhN7tc5036d3URyWOW1lneXeOq0NTxY45TtZKw80/V8JAGK4AAAAAAxWVfzPiMtPLTzl+HrMsfK9vzTJ36KqeO1/Fld9OY5y7ZWXvt9Gsk4nOXPPKdrlbPxRurM5GNAFgAAAAAAAAAAAAAAX3LdfHHS05ldrlbjj9etUJb+XSK6z8ky8deKrk/G3L4MrvZN8b6z0Wrls5eNJegCEgAAI9fVmONyyvSA92qTnfES5TCf7e/vfJBr8wyyzmXljv4MfKX1+tadvne9b48fL2s9a6ANlQAAAAAAAAAAAAAAAAAEnD61wymU7zfv9Zs3uU8XZnZll0z3u9vbKdd2eD5T4sZllltLN5JOuzb0+T6cu9uWX0tm35Mt6x6WkqwlZBztAHnUxtlku19Z3gPOvr44Y3LK9J+N+kU3NuMmcwmN6dbZ2u/1e+M5ZqW7+Px/9rtZ+zzp8myvfPGfSS1rn4z76peqwS8Vw9wyuN95Z5xE3l6oAJAAAAAAAAAAAAATaPD3LHPKX5JLt6zzQo6ACQX/AAfLMJjLlJllZ137T6bKrl3D3PUx6dMbMsvaV0rDy6/IvmEgDFcAAAAABW8z4DLUyxyxs6Ta72zz6KjieFywsmU79rLvK6lp804fx6d9cfin3d5+DTHks+ldZc4A6WYAAAAAAAAADOEm837bze+k3bHG8HdOzzxvy5Tzay25br454XQz9PhvrPT3imrZ9piDkuX+pcb2yws/v82pxGn4c8sfS2fd5J5o56erjNrbMt5tPmn/AI2eeaHXHUnazw338v7+iOz5f6c+lWCbgtLxamOPlbvfadavbxC95Zw/g059rL4sv4bjDLkt62gAgAAAAAAGKyA5XieHywu2U29Nu1n0RL3nmlvhMvPG/len8KKT6fXo6sa7OsrOUAXQAAAAAAAAPehhbnjjLtblJL6fV4TcHreDPHLyl6+17ovojp8Jdpvd7t1u22/1Y1dOZSzKby95XqVlxtlTnyaeOWXbDznn7SrLHQxll8M3k2l27T0SCbq32jgAhIAAAAAAAAADxracyxuN7WbVWcZ4NHTuGPz5zbe99vO1bKHneltqTLyyn5zp/C/j+7xXSuAdTMAAAAAAAAAB1HA23Twt7+GfoneNLHaSekk/CPbiraAAAAAAAAAAAAAADU5nw/j07J80+LH39G2xUy8vSuRG1zLR8OplPK/FPv8A67tV1y9jEASAAAAAADOPee7ADroy1uX6/j08b57bX3jZcVnGwAAAAAAAAAAAAAAACo5/pfJn7439Z+6nXvPM5/hyedym33KJ0+L+WWvYA0QAAAAAAAAsOS6+2fg8s/ysndfuZ5bltq4X/lt+M2dM5vLPtpj0AM1gAAAAAAAAAAABisoON8X+Hn4btl4btf1BznFauWWduV6y2dO02vaIgdknGIAkAAAAAAAAJfP06rjS51Nviwu/rjZtfxU4rrM17JbF7Oc6f2c/wn8vP+c42yTDK73byUjf5No+LU3vbCeL7+0UvjzJ1aatX8ZBztAAAAAAAAAABVc347aXTxvxXplfSenu9cy5l4d8MOuXa3yx/qo7Wvj8f7VNaAHQoAAAAAAAAAAAALb/AOf76ntj+4M/J/Kc+1yA5moAAAAAAAA859r7UAclAHZGNAEgAAAAAD//2Q==';
+
         $song->save();
         $song = new Song();
         $song->name = 'Sau Tat Ca 3';
@@ -161,8 +281,44 @@ class SongSeeder extends Seeder
         $song->author_id = '2';
         $song->album_id = '2';
         $song->user_id = '2';
-        $song->save();
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335305092?alt=media&token=a0637f86-43f3-4f99-a58f-09018e6c2b00';
+        $song->description = 'Ngày ta sánh đôi hạnh phúc nói cười
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Để hứa với nhau một câu sẽ đi trọn tới cuối con đường
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời
+        Ngày ta sánh đôi hạnh phúc nói cười
+        Chỉ mong thế thôi đến tận cuối cùng
+        Từng giây phút trôi ánh mắt rạng ngời
+        Cầm tay bước đi tiếng yêu cất lời
+        Và anh cám ơn cuộc đời này
+        Đã mang em về bên mình để rồi
+        Mỗi sớm mai (mỗi sớm mai)
+        Khi thức dậy anh nói rằng (khi thức dậy)
+        Hãy yêu anh và bên anh người nhé
+        Nắm tay anh thật chặt giữ tay anh thật lâu
+        Hứa với anh một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Để hứa với nhau một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu
+        Hứa với nhau một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Hứa với nhau một câu sẽ đi trọn đến cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời';
+        $song->like = 1224;
+        $song->view =7842216;
+        $song->posting_date = '2022/01/23';
+        $song->image = 'data:image/jpeg;base64,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';
 
+        $song->save();
         $song = new Song();
         $song->name = 'Danh Mat Em';
         $song->singer_id = '3';
@@ -170,6 +326,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335327710?alt=media&token=b2faf971-61a0-40a2-aec1-515ad7381551';
+
         $song->description = 'Chỉ còn anh lang thang chốn cũ
         Lòng quặn đau nước mắt ướt nhoà
         Chẳng thể nào biết được liệu mai sau có thể gặp lại nữa
@@ -208,8 +366,10 @@ class SongSeeder extends Seeder
         Thời gian quay trở lại người anh yêu vẫn chỉ là em';
         $song->like = 1234;
         $song->view =783236;
-        $song->save();
+        $song->posting_date = '2022/01/23';
+        $song->image = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxETEBAPEQ4QEg8QDxIPEA8PDRAQEA8SFREXFhURFxYYHSggGBolGxMYITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGi0fHx0tLS0tKy0tLS0tLS0rLS0tLSstLS0rLS0tLSstLTctLS0rLSsrLS0tLSstNysrKys3N//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAwUBBAYCB//EADQQAQEAAQIEBAMHAgcBAAAAAAABAgMRBAUhMRJBUXEiMmFSgZGhscHR4fATFSNCYnLxBv/EABgBAQADAQAAAAAAAAAAAAAAAAABAgME/8QAHhEBAQEBAAIDAQEAAAAAAAAAAAECEQMxEiFBMnH/2gAMAwEAAhEDEQA/APoQDtYgAAAAAAAAAAJeG0LnlMJtvfO+SO8EQsdTgNPG+G68mX1x6T369Gvr8FljPFLM8PtYXeT3RNyp5WsAsgAAAAAAAAAAAAAAAAAAAAAAE3CcPc8pjJdvOzynqu+F5bhh1+bL1y8vaKa3MpmeqvhOWZ59b8OPrZ1vtFlo8qxxsymWfill33n8LAYXyaq8zI05wE+LfPPbLK5XGZbTr7JtDhsMJZjjJL3+qYV7U8VfGcplviwsxv2b8v8ARUa+jlhdsptf19nVoeJ4fHOeHKdPL1nsvnyWe0XLlhs8fwl08tu+N+W+v092s6JeswBIAAAAAAAAAAAAAAAAM4422STe27SMLHkmjvncr2wnT3qurydJOrXgOGmnhMfPvlfWtkHJ3rYAAAAABDxfDzPG437r6X1cxq6dxyuN7y7V1qo57odMdSd/ly/a/wB+rXx65eK6inAdDMAAAAAAAAAAAAAAAAdBybR8OnL55Xxfd5KjgOFuplt/tnzX9nS4zabTtOkYeXX4vmfrIDFcAAAAAAaPOZ/pZe+P6t5r8do+PTyxnezp7zrEz2i+nMBZ5XvOmw7GQAAAAAAAAAAAAAAACbhLfHhN7tc5036d3URyWOW1lneXeOq0NTxY45TtZKw80/V8JAGK4AAAAAAxWVfzPiMtPLTzl+HrMsfK9vzTJ36KqeO1/Fld9OY5y7ZWXvt9Gsk4nOXPPKdrlbPxRurM5GNAFgAAAAAAAAAAAAAAX3LdfHHS05ldrlbjj9etUJb+XSK6z8ky8deKrk/G3L4MrvZN8b6z0Wrls5eNJegCEgAAI9fVmONyyvSA92qTnfES5TCf7e/vfJBr8wyyzmXljv4MfKX1+tadvne9b48fL2s9a6ANlQAAAAAAAAAAAAAAAAAEnD61wymU7zfv9Zs3uU8XZnZll0z3u9vbKdd2eD5T4sZllltLN5JOuzb0+T6cu9uWX0tm35Mt6x6WkqwlZBztAHnUxtlku19Z3gPOvr44Y3LK9J+N+kU3NuMmcwmN6dbZ2u/1e+M5ZqW7+Px/9rtZ+zzp8myvfPGfSS1rn4z76peqwS8Vw9wyuN95Z5xE3l6oAJAAAAAAAAAAAAATaPD3LHPKX5JLt6zzQo6ACQX/AAfLMJjLlJllZ137T6bKrl3D3PUx6dMbMsvaV0rDy6/IvmEgDFcAAAAABW8z4DLUyxyxs6Ta72zz6KjieFywsmU79rLvK6lp804fx6d9cfin3d5+DTHks+ldZc4A6WYAAAAAAAAADOEm837bze+k3bHG8HdOzzxvy5Tzay25br454XQz9PhvrPT3imrZ9piDkuX+pcb2yws/v82pxGn4c8sfS2fd5J5o56erjNrbMt5tPmn/AI2eeaHXHUnazw338v7+iOz5f6c+lWCbgtLxamOPlbvfadavbxC95Zw/g059rL4sv4bjDLkt62gAgAAAAAAGKyA5XieHywu2U29Nu1n0RL3nmlvhMvPG/len8KKT6fXo6sa7OsrOUAXQAAAAAAAAPehhbnjjLtblJL6fV4TcHreDPHLyl6+17ovojp8Jdpvd7t1u22/1Y1dOZSzKby95XqVlxtlTnyaeOWXbDznn7SrLHQxll8M3k2l27T0SCbq32jgAhIAAAAAAAAADxracyxuN7WbVWcZ4NHTuGPz5zbe99vO1bKHneltqTLyyn5zp/C/j+7xXSuAdTMAAAAAAAAAB1HA23Twt7+GfoneNLHaSekk/CPbiraAAAAAAAAAAAAAADU5nw/j07J80+LH39G2xUy8vSuRG1zLR8OplPK/FPv8A67tV1y9jEASAAAAAADOPee7ADroy1uX6/j08b57bX3jZcVnGwAAAAAAAAAAAAAAACo5/pfJn7439Z+6nXvPM5/hyedym33KJ0+L+WWvYA0QAAAAAAAAsOS6+2fg8s/ysndfuZ5bltq4X/lt+M2dM5vLPtpj0AM1gAAAAAAAAAAABisoON8X+Hn4btl4btf1BznFauWWduV6y2dO02vaIgdknGIAkAAAAAAAAJfP06rjS51Nviwu/rjZtfxU4rrM17JbF7Oc6f2c/wn8vP+c42yTDK73byUjf5No+LU3vbCeL7+0UvjzJ1aatX8ZBztAAAAAAAAAABVc347aXTxvxXplfSenu9cy5l4d8MOuXa3yx/qo7Wvj8f7VNaAHQoAAAAAAAAAAAALb/AOf76ntj+4M/J/Kc+1yA5moAAAAAAAA859r7UAclAHZGNAEgAAAAAD//2Q==';
 
+        $song->save();
         $song = new Song();
         $song->name = 'Baby shark';
         $song->singer_id = '3';
@@ -217,6 +377,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
+
         $song->description = '아기 상어 뚜루루 뚜루
         귀여운 뚜루루 뚜루
         바닷속 뚜루루 뚜루
@@ -255,8 +417,10 @@ class SongSeeder extends Seeder
         노래 끝! 오예!';
         $song->like = 134;
         $song->view =783246;
-        $song->save();
+        $song->posting_date = '2003/01/23';
+        $song->image = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxETEBAPEQ4QEg8QDxIPEA8PDRAQEA8SFREXFhURFxYYHSggGBolGxMYITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGi0fHx0tLS0tKy0tLS0tLS0rLS0tLSstLS0rLS0tLSstLTctLS0rLSsrLS0tLSstNysrKys3N//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAwUBBAYCB//EADQQAQEAAQIEBAMHAgcBAAAAAAABAgMRBAUhMRJBUXEiMmFSgZGhscHR4fATFSNCYnLxBv/EABgBAQADAQAAAAAAAAAAAAAAAAABAgME/8QAHhEBAQEBAAIDAQEAAAAAAAAAAAECEQMxEiFBMnH/2gAMAwEAAhEDEQA/APoQDtYgAAAAAAAAAAJeG0LnlMJtvfO+SO8EQsdTgNPG+G68mX1x6T369Gvr8FljPFLM8PtYXeT3RNyp5WsAsgAAAAAAAAAAAAAAAAAAAAAAE3CcPc8pjJdvOzynqu+F5bhh1+bL1y8vaKa3MpmeqvhOWZ59b8OPrZ1vtFlo8qxxsymWfill33n8LAYXyaq8zI05wE+LfPPbLK5XGZbTr7JtDhsMJZjjJL3+qYV7U8VfGcplviwsxv2b8v8ARUa+jlhdsptf19nVoeJ4fHOeHKdPL1nsvnyWe0XLlhs8fwl08tu+N+W+v092s6JeswBIAAAAAAAAAAAAAAAAM4422STe27SMLHkmjvncr2wnT3qurydJOrXgOGmnhMfPvlfWtkHJ3rYAAAAABDxfDzPG437r6X1cxq6dxyuN7y7V1qo57odMdSd/ly/a/wB+rXx65eK6inAdDMAAAAAAAAAAAAAAAAdBybR8OnL55Xxfd5KjgOFuplt/tnzX9nS4zabTtOkYeXX4vmfrIDFcAAAAAAaPOZ/pZe+P6t5r8do+PTyxnezp7zrEz2i+nMBZ5XvOmw7GQAAAAAAAAAAAAAAACbhLfHhN7tc5036d3URyWOW1lneXeOq0NTxY45TtZKw80/V8JAGK4AAAAAAxWVfzPiMtPLTzl+HrMsfK9vzTJ36KqeO1/Fld9OY5y7ZWXvt9Gsk4nOXPPKdrlbPxRurM5GNAFgAAAAAAAAAAAAAAX3LdfHHS05ldrlbjj9etUJb+XSK6z8ky8deKrk/G3L4MrvZN8b6z0Wrls5eNJegCEgAAI9fVmONyyvSA92qTnfES5TCf7e/vfJBr8wyyzmXljv4MfKX1+tadvne9b48fL2s9a6ANlQAAAAAAAAAAAAAAAAAEnD61wymU7zfv9Zs3uU8XZnZll0z3u9vbKdd2eD5T4sZllltLN5JOuzb0+T6cu9uWX0tm35Mt6x6WkqwlZBztAHnUxtlku19Z3gPOvr44Y3LK9J+N+kU3NuMmcwmN6dbZ2u/1e+M5ZqW7+Px/9rtZ+zzp8myvfPGfSS1rn4z76peqwS8Vw9wyuN95Z5xE3l6oAJAAAAAAAAAAAAATaPD3LHPKX5JLt6zzQo6ACQX/AAfLMJjLlJllZ137T6bKrl3D3PUx6dMbMsvaV0rDy6/IvmEgDFcAAAAABW8z4DLUyxyxs6Ta72zz6KjieFywsmU79rLvK6lp804fx6d9cfin3d5+DTHks+ldZc4A6WYAAAAAAAAADOEm837bze+k3bHG8HdOzzxvy5Tzay25br454XQz9PhvrPT3imrZ9piDkuX+pcb2yws/v82pxGn4c8sfS2fd5J5o56erjNrbMt5tPmn/AI2eeaHXHUnazw338v7+iOz5f6c+lWCbgtLxamOPlbvfadavbxC95Zw/g059rL4sv4bjDLkt62gAgAAAAAAGKyA5XieHywu2U29Nu1n0RL3nmlvhMvPG/len8KKT6fXo6sa7OsrOUAXQAAAAAAAAPehhbnjjLtblJL6fV4TcHreDPHLyl6+17ovojp8Jdpvd7t1u22/1Y1dOZSzKby95XqVlxtlTnyaeOWXbDznn7SrLHQxll8M3k2l27T0SCbq32jgAhIAAAAAAAAADxracyxuN7WbVWcZ4NHTuGPz5zbe99vO1bKHneltqTLyyn5zp/C/j+7xXSuAdTMAAAAAAAAAB1HA23Twt7+GfoneNLHaSekk/CPbiraAAAAAAAAAAAAAADU5nw/j07J80+LH39G2xUy8vSuRG1zLR8OplPK/FPv8A67tV1y9jEASAAAAAADOPee7ADroy1uX6/j08b57bX3jZcVnGwAAAAAAAAAAAAAAACo5/pfJn7439Z+6nXvPM5/hyedym33KJ0+L+WWvYA0QAAAAAAAAsOS6+2fg8s/ysndfuZ5bltq4X/lt+M2dM5vLPtpj0AM1gAAAAAAAAAAABisoON8X+Hn4btl4btf1BznFauWWduV6y2dO02vaIgdknGIAkAAAAAAAAJfP06rjS51Nviwu/rjZtfxU4rrM17JbF7Oc6f2c/wn8vP+c42yTDK73byUjf5No+LU3vbCeL7+0UvjzJ1aatX8ZBztAAAAAAAAAABVc347aXTxvxXplfSenu9cy5l4d8MOuXa3yx/qo7Wvj8f7VNaAHQoAAAAAAAAAAAALb/AOf76ntj+4M/J/Kc+1yA5moAAAAAAAA859r7UAclAHZGNAEgAAAAAD//2Q==';
 
+        $song->save();
         $song = new Song();
         $song->name = 'Five Little Ducks';
         $song->singer_id = '3';
@@ -264,6 +428,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335305092?alt=media&token=a0637f86-43f3-4f99-a58f-09018e6c2b00';
+
         $song->description = 'Five little ducks went swimming one day
         Over the hills and far away
         The little duck said, "Quack, quack, quack, quack"
@@ -286,8 +452,10 @@ class SongSeeder extends Seeder
         And then no more little ducks came back';
         $song->like = 1224;
         $song->view =783636;
-        $song->save();
+        $song->posting_date = '2022/01/23';
+        $song->image = 'data:image/jpeg;base64,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';
 
+        $song->save();
         $song = new Song();
         $song->name = 'aBoy';
         $song->singer_id = '3';
@@ -295,6 +463,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
+
         $song->description = 'A-yo Choice drop it on me
         Yo 밤은 깊었는데 잠은 안오고
         늘어난 두통과 싸우고
@@ -306,8 +476,10 @@ class SongSeeder extends Seeder
         Home sweet home 아늑하다';
         $song->like = 1234;
         $song->view =783231;
-        $song->save();
+        $song->posting_date = '2022/01/23';
+        $song->image = 'data:image/jpeg;base64,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';
 
+        $song->save();
         $song = new Song();
         $song->name = 'baby';
         $song->singer_id = '3';
@@ -315,6 +487,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335305092?alt=media&token=a0637f86-43f3-4f99-a58f-09018e6c2b00';
+
         $song->description = 'Oh whoa, oh whoa, oh whoa
         You know you love me, I know you care
         Just shout whenever and Ill be there
@@ -323,8 +497,10 @@ class SongSeeder extends Seeder
         Are we an item? Girl, quit playin';
         $song->like = 1234;
         $song->view =783236;
-        $song->save();
+        $song->posting_date = '2022/03/23';
+        $song->image = 'data:image/jpeg;base64,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';
 
+        $song->save();
         $song = new Song();
         $song->name = 'Người Ơi Người Ở Đừng Về';
         $song->singer_id = '3';
@@ -332,6 +508,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335327710?alt=media&token=b2faf971-61a0-40a2-aec1-515ad7381551';
+
         $song->description = 'Lâu nay chưa gặp nhau đấy
         Hay ta quên số nhau vậy?
         Nghe đâu lúc này bận lắm
@@ -390,8 +568,10 @@ class SongSeeder extends Seeder
         Người ở tôi về';
         $song->like = 1234;
         $song->view =783236;
-        $song->save();
+        $song->posting_date = '2022/02/23';
+        $song->image = 'data:image/jpeg;base64,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';
 
+        $song->save();
         $song = new Song();
         $song->name = 'mưa';
         $song->singer_id = '3';
@@ -399,6 +579,8 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
+
         $song->description = 'Chiều nay trên phố chợt có cơn mưa bay
         Giọt mưa vội vã nhẹ rơi mắt người
         Mưa có vui như em và anh
@@ -454,8 +636,10 @@ class SongSeeder extends Seeder
         Mình tay trong tay';
         $song->like = 1234;
         $song->view =783236;
-         $song->save();
+        $song->posting_date = '2022/01/23';
+        $song->image = 'data:image/jpeg;base64,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';
 
+        $song->save();
         $song = new Song();
         $song->name = 'Năm anh em trên một chiếc xe tăng';
         $song->singer_id = '2';
@@ -463,6 +647,8 @@ class SongSeeder extends Seeder
         $song->author_id = '2';
         $song->album_id = '2';
         $song->user_id = '2';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335305092?alt=media&token=a0637f86-43f3-4f99-a58f-09018e6c2b00';
+
         $song->description = 'Năm anh em trên một chiếc xe tăng
         Như năm bông hoa nở cùng một cội
         Như năm ngón tay trên một bàn tay
@@ -485,10 +671,11 @@ class SongSeeder extends Seeder
         Một niềm tin quyết thắng trong trận này.';
         $song->like = 1234;
         $song->view =783236;
-        // $song->posting_date = 2022/01/02;
+
+        $song->posting_date = '2022/01/03';
+        $song->image = 'data:image/jpeg;base64,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';
 
         $song->save();
-
         $song = new Song();
         $song->name = 'Nàng thơ';
         $song->singer_id = '2';
@@ -496,6 +683,8 @@ class SongSeeder extends Seeder
         $song->author_id = '2';
         $song->album_id = '2';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335327710?alt=media&token=b2faf971-61a0-40a2-aec1-515ad7381551';
+
         $song->description = 'Em, ngày em đánh rơi nụ cười vào anh
         Có nghĩ sau này em sẽ chờ
         Và vô tư cho đi hết những ngây thơ
@@ -537,8 +726,8 @@ class SongSeeder extends Seeder
         Trả hết cho em';
         $song->like = 1234;
         $song->view =783236;
-        // $song->posting_date = 2021/04/02;
-
+        $song->posting_date = '2001/01/23';
+        $song->image = 'data:image/jpeg;base64,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';
         $song->save();
 
         $song = new Song();
@@ -548,6 +737,8 @@ class SongSeeder extends Seeder
         $song->author_id = '1';
         $song->album_id = '1';
         $song->user_id = '1';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
+
         $song->description = 'Khi đôi môi em còn đỏ mọng
         Em muốn nói em yêu anh
         Khi men còn trong hơi thở
@@ -594,6 +785,9 @@ class SongSeeder extends Seeder
         Lại gần hôn anh đi';
         $song->like = 1234;
         $song->view =783236;
+        $song->posting_date = '2022/01/23';
+        $song->image = 'data:image/jpeg;base64,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';
+
         $song->save();
         $song = new Song();
         $song->name = 'Danh Mat Em 2';
@@ -602,6 +796,44 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335340151?alt=media&token=b35842f5-7416-49c0-a467-1669f9b4f35e';
+
+        $song->description = 'Ngày ta sánh đôi hạnh phúc nói cười
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Để hứa với nhau một câu sẽ đi trọn tới cuối con đường
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời
+        Ngày ta sánh đôi hạnh phúc nói cười
+        Chỉ mong thế thôi đến tận cuối cùng
+        Từng giây phút trôi ánh mắt rạng ngời
+        Cầm tay bước đi tiếng yêu cất lời
+        Và anh cám ơn cuộc đời này
+        Đã mang em về bên mình để rồi
+        Mỗi sớm mai (mỗi sớm mai)
+        Khi thức dậy anh nói rằng (khi thức dậy)
+        Hãy yêu anh và bên anh người nhé
+        Nắm tay anh thật chặt giữ tay anh thật lâu
+        Hứa với anh một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Để hứa với nhau một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu
+        Hứa với nhau một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Hứa với nhau một câu sẽ đi trọn đến cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời';
+        $song->like = 1224;
+        $song->view =784536;
+        $song->posting_date = '2002/01/23';
+        $song->image = 'data:image/jpeg;base64,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';
+
         $song->save();
         $song = new Song();
         $song->name = 'Danh Mat Em 3';
@@ -610,8 +842,45 @@ class SongSeeder extends Seeder
         $song->author_id = '3';
         $song->album_id = '3';
         $song->user_id = '3';
-        $song->save();
+        $song->link = 'https://firebasestorage.googleapis.com/v0/b/pro1-d366b.appspot.com/o/RoomsImages%2F1650335327710?alt=media&token=b2faf971-61a0-40a2-aec1-515ad7381551';
 
+        $song->description = 'Ngày ta sánh đôi hạnh phúc nói cười
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Để hứa với nhau một câu sẽ đi trọn tới cuối con đường
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời
+        Ngày ta sánh đôi hạnh phúc nói cười
+        Chỉ mong thế thôi đến tận cuối cùng
+        Từng giây phút trôi ánh mắt rạng ngời
+        Cầm tay bước đi tiếng yêu cất lời
+        Và anh cám ơn cuộc đời này
+        Đã mang em về bên mình để rồi
+        Mỗi sớm mai (mỗi sớm mai)
+        Khi thức dậy anh nói rằng (khi thức dậy)
+        Hãy yêu anh và bên anh người nhé
+        Nắm tay anh thật chặt giữ tay anh thật lâu
+        Hứa với anh một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Để hứa với nhau một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu
+        Hứa với nhau một câu sẽ đi trọn tới cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì em yêu ơi xin em hãy cứ tin
+        Nắm tay nhau thật chặt giữ tay nhau thật lâu (ta-da)
+        Hứa với nhau một câu sẽ đi trọn đến cuối con đường (cuối đường)
+        Đến khi tim ngừng đập và đôi chân ngừng đi
+        Thì đôi ta cũng sẽ không xa rời';
+        $song->like = 13224;
+        $song->view =72236;
+        $song->posting_date = '2001/02/23';
+        $song->image = 'data:image/jpeg;base64,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';
+
+        $song->save();
 
 
     }

@@ -2,84 +2,68 @@
 
 namespace App\Http\Controllers;
 
+// use PlaylistRepository;
+
 use App\Models\Playlist;
 use Illuminate\Http\Request;
+use App\Repositories\UserRepository;
+use App\Repositories\PlaylistRepository;
+
+
 
 class PlaylistController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public $playlistRepository;
+    public $userRepository;
+    public function __construct(PlaylistRepository $playlistRepository)
+    {
+        $this->playlistRepository = $playlistRepository;
+
+
+    }
+
     public function index()
     {
-        //
+        $playlists = $this->playlistRepository->getAll();
+        return response()->json($playlists, 200);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+
+        $this->playlistRepository->store($request);
+        return response()->json([
+            'message' => "Successfully created",
+            'success' => true,
+        ], 200);
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Playlist  $playlist
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Playlist $playlist)
+
+    public function show($id)
     {
-        //
+        $playlist = $this->playlistRepository->getById($id);
+        return response()->json($playlist,200);
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Playlist  $playlist
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Playlist $playlist)
+
+    public function update(Request $request, $id)
     {
-        //
+        $this->playlistRepository->update($request,$id);
+        return response()->json([
+            'message' => "Successfully updated",
+            'success' => true
+        ], 200);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Playlist  $playlist
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Playlist $playlist)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Playlist  $playlist
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Playlist $playlist)
     {
-        //
+        $this->playlistRepository->deleteById($id);
+        return response()->json([
+            'message' => "Successfully deleted",
+            'success' => true
+        ], 200);
+
     }
 }
