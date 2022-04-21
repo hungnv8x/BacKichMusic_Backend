@@ -28,6 +28,14 @@ class SingerRepository extends BaseRepository
 
     }
 
+    public function searchBySinger($request)
+    {
+        return DB::table('singers')->join('categories', 'singers.category_id', '=', 'categories.id')
+        ->select('singers.*', 'categories.name as category')
+        ->where('singers.name','like',  "%$request%")
+        ->get();
+    }
+
     public function store($request)
     {
         $singer = new Singer();
@@ -43,6 +51,8 @@ class SingerRepository extends BaseRepository
         $singer->save();
 
     }
+
+
 
     public function update($request,$id)
     {

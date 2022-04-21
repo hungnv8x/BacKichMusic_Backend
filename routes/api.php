@@ -75,6 +75,7 @@ Route::prefix('singers')->group(function(){
     Route::get('{id}/detail', [SingerController::class, 'show']);
     Route::put('{id}/update', [SingerController::class, 'update']);
     Route::delete('{id}/update', [SingerController::class, 'destroy']);
+    Route::get('{data}/search', [SingerController::class, 'search']);
 
 });
 
