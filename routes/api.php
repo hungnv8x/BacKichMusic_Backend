@@ -24,13 +24,12 @@ use App\Http\Controllers\PlaylistController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::post('/login', [AuthController::class, 'login']);
 Route::group([
     'middleware' => 'api',
     'prefix' => 'auth'
 
 ], function () {
-
+    Route::post('/login', [AuthController::class, 'login']);
     Route::post('/register', [AuthController::class, 'register']);
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/refresh', [AuthController::class, 'refresh']);
@@ -106,6 +105,7 @@ Route::prefix('songs')->group(function () {
     Route::get('toplike',[SongController::class, 'getTopLike']);
     Route::get('{id}/singer',[SongController::class, 'getSongBySinger']);
     Route::get('{id}/category',[SongController::class, 'getSongByCategory']);
+    Route::get('{data}/search', [SongController::class, 'searchSong']);
 
     Route::get('create',[SongController::class, 'create']);
     Route::post('create',[SongController::class, 'store']);

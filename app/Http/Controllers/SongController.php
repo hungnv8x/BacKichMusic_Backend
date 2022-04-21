@@ -49,6 +49,12 @@ class SongController extends Controller
         return response()->json($songs,200);
     }
 
+    public function searchSong($data)
+    {
+        $songs = $this->songRepository->searchSong($data);
+        return response()->json($songs,200);
+    }
+
 
     public function store(Request $request)
     {
