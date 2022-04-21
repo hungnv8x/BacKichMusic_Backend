@@ -52,7 +52,6 @@ class SingerController extends Controller
             'success' => true,
             $categories
         ], 200);
-
     }
 
 
