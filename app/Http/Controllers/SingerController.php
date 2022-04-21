@@ -18,11 +18,29 @@ class SingerController extends Controller
        $this->categoryRepository= $categoryRepository;
     }
 
+//     public function index(Request $request)
+//     {
+//         if(isset($request->search)){
+//             $singers = $this->search($request->search);
+//         }else{
+
+//             $singers = $this->singerRepository->getAll();
+//         }
+// //        return view('index', compact('singers'));
+//         return response()->json($singers, 201);
+//     }
+
     public function index()
     {
         $singers = $this->singerRepository->getAll();
         return response()->json($singers, 200);
 
+    }
+
+    public function search($data)
+    {
+        $singers =  $this->singerRepository->searchBySinger($data);
+        return response()->json($singers, 200);
     }
 
     public function store(Request $request)
