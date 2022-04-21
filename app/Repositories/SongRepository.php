@@ -113,7 +113,7 @@ class SongRepository extends BaseRepository
         ->join('users', 'songs.user_id', '=', 'users.id')
         ->join('albums', 'songs.album_id', '=', 'albums.id')
         ->select('songs.*', 'categories.name as category', 'singers.name as singer', 'authors.name as author', 'albums.name as album', 'users.name as user')
-        ->where('singer_id',$id)->get();
+        ->where('songs.singer_id',$id)->get();
     }
     public function getSongByCategory($id){
         return  DB::table($this->table)->join('categories', 'songs.category_id', '=', 'categories.id')
@@ -122,7 +122,7 @@ class SongRepository extends BaseRepository
         ->join('users', 'songs.user_id', '=', 'users.id')
         ->join('albums', 'songs.album_id', '=', 'albums.id')
         ->select('songs.*', 'categories.name as category', 'singers.name as singer', 'authors.name as author', 'albums.name as album', 'users.name as user')
-        ->where('category_id',$id)->get();
+        ->where('songs.category_id',$id)->get();
     }
 
 }
