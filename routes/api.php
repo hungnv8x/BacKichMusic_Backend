@@ -96,7 +96,7 @@ Route::prefix('songs')->group(function () {
     Route::get('{id}/singer',[SongController::class, 'getSongBySinger']);
     Route::get('{id}/category',[SongController::class, 'getSongByCategory']);
 
-
+    
     Route::get('create',[SongController::class, 'create'])->name('category.showFormCreate');
     Route::post('create',[SongController::class, 'store'])->name('category.create');
     Route::get('{id}/update',[SongController::class, 'edit'])->name('category.showFormUpdate');
