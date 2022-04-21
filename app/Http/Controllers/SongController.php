@@ -22,6 +22,7 @@ class SongController extends Controller
         $songs = $this->songRepository->getAll();
         return response()->json($songs,200);
     }
+
     public function getTopView(){
         $songs = $this->songRepository->getTopView();
         // dd($songs);
@@ -47,6 +48,7 @@ class SongController extends Controller
         // dd($songs);
         return response()->json($songs,200);
     }
+
 
     public function store(Request $request)
     {

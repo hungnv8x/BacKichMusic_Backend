@@ -9,6 +9,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\SingerController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PlaylistController;
 
@@ -87,14 +88,18 @@ Route::prefix('authors')->group(function(){
 
 });
 
+Route::prefix('comments')->group(function(){
+    Route::get('', [CommentController::class, 'index']);
+    Route::post('create', [CommentController::class, 'store']);
+    Route::get('{id}/detail', [CommentController::class, 'show']);
+    Route::put('{id}/update', [CommentController::class, 'update']);
+    Route::delete('{id}/delete', [CommentController::class, 'destroy']);
+
+});
 
 Route::prefix('songs')->group(function () {
     Route::get('',[SongController::class, 'index']);
-    Route::get('topview',[SongController::class, 'getTopView']);
-    Route::get('topnew',[SongController::class, 'getTopNew']);
-    Route::get('toplike',[SongController::class, 'getTopLike']);
-    Route::get('{id}/singer',[SongController::class, 'getSongBySinger']);
-    Route::get('{id}/category',[SongController::class, 'getSongByCategory']);
+
 
 
     Route::get('create',[SongController::class, 'create']);
