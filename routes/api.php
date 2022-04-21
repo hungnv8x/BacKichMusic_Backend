@@ -105,6 +105,7 @@ Route::prefix('songs')->group(function () {
     Route::get('toplike',[SongController::class, 'getTopLike']);
     Route::get('{id}/singer',[SongController::class, 'getSongBySinger']);
     Route::get('{id}/category',[SongController::class, 'getSongByCategory']);
+    Route::get('{data}/search', [SongController::class, 'searchSong']);
 
     Route::get('create',[SongController::class, 'create']);
     Route::post('create',[SongController::class, 'store']);
