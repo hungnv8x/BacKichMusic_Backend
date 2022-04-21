@@ -22,7 +22,33 @@ class SongController extends Controller
         $songs = $this->songRepository->getAll();
         return response()->json($songs,200);
     }
-    
+
+    public function getTopView(){
+        $songs = $this->songRepository->getTopView();
+        // dd($songs);
+        return response()->json($songs,200);
+    }
+    public function getTopNew(){
+        $songs = $this->songRepository->getTopNew();
+
+        return response()->json($songs,200);
+    }
+    public function getTopLike(){
+        $songs = $this->songRepository->getTopLike();
+
+        return response()->json($songs,200);
+    }
+    public function getSongBySinger($id){
+        $songs = $this->songRepository->getSongBySinger($id);
+        // dd($songs);
+        return response()->json($songs,200);
+    }
+    public function getSongByCategory($id){
+        $songs = $this->songRepository->getSongByCategory($id);
+        // dd($songs);
+        return response()->json($songs,200);
+    }
+
 
     public function store(Request $request)
     {
