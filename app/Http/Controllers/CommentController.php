@@ -4,82 +4,75 @@ namespace App\Http\Controllers;
 
 use App\Models\Comment;
 use Illuminate\Http\Request;
+use App\Http\Requests\CommentRequest;
+use App\Repositories\CommentRepository;
+use App\Repositories\SongRepository;
+use App\Repositories\UserRepository;
 
 class CommentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public $commentRepository;
+    public $userRepository;
+    public $songRepository;
+    public function __construct(CommentRepository $commentRepository,
+                                UserRepository $userRepository,
+                                SongRepository $songRepository){
+       $this->commentRepository= $commentRepository;
+       $this->userRepository= $userRepository;
+       $this->songRepository= $songRepository;
+    }
+
     public function index()
     {
-        //
+        $comments = $this->commentRepository->getAll();
+        return response()->json($comments, 200);
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $users = $this->userRepository->getAll();
+        $songs = $this->songRepository->getAll();
+        $this->commentRepository->store($request);
+        return response()->json([
+            'message' => "Successfully created",
+            'success' => true,
+            $users,
+            $songs
+        ], 200);
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Comment  $comment
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Comment $comment)
+
+    public function show($id)
     {
-        //
+        $comment = $this->commentRepository->getById($id);
+        return response()->json($comment,200);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Comment  $comment
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Comment $comment)
+
+
+    public function update(Request $request, $id)
     {
-        //
+        $users = $this->userRepository->getAll();
+        $songs = $this->songRepository->getAll();
+        $this->commentRepository->update($request,$id);
+        return response()->json([
+            'message' => "Successfully updated",
+            'success' => true,
+            $users,
+            $songs
+        ], 200);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Comment  $comment
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Comment $comment)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Comment  $comment
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Comment $comment)
+    public function destroy($id)
     {
-        //
+        $this->commentRepository->deleteById($id);
+        return response()->json([
+            'message' => "Successfully deleted",
+            'success' => true
+        ], 200);
+
     }
 }
