@@ -13,7 +13,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class User extends Authenticatable implements JWTSubject
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable ;
 
     /**
      * The attributes that are mass assignable.
@@ -26,7 +26,9 @@ class User extends Authenticatable implements JWTSubject
         'password',
         'role_id',
         'phone',
-        'avatar'
+        'avatar',
+        'social_id',
+        'social_type'
     ];
     // protected $guarded = [
 
@@ -40,6 +42,8 @@ class User extends Authenticatable implements JWTSubject
     protected $hidden = [
         'password',
         'remember_token',
+        'two_factor_recovery_codes',
+        'two_factor_secret',
     ];
 
     /**

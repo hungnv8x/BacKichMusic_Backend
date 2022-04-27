@@ -53,6 +53,7 @@ class SongRepository extends BaseRepository
         $song->name = $request->name;
         $song->description = $request->desciption;
         $song->image = $request->image;
+        $song->link = $request->link;
         $song->like = 0;
         $song->view = 0;
         $song->posting_date = Carbon::now();

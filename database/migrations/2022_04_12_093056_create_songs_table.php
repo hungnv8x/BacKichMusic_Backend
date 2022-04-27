@@ -16,15 +16,15 @@ class CreateSongsTable extends Migration
         Schema::create('songs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->unsignedBigInteger('singer_id');
-            $table->foreign('singer_id')->references('id')->on('singers');
+            $table->foreign('singer_id')->references('id')->on('singers')->onDelete('cascade');
             $table->unsignedBigInteger('author_id');
-            $table->foreign('author_id')->references('id')->on('authors');
+            $table->foreign('author_id')->references('id')->on('authors')->onDelete('cascade');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('album_id');
-            $table->foreign('album_id')->references('id')->on('albums');
+            $table->foreign('album_id')->references('id')->on('albums')->onDelete('cascade');
 
             $table->string('name');
             $table->longtext('description')->nullable();
@@ -38,6 +38,7 @@ class CreateSongsTable extends Migration
 
 
             $table->timestamps();
+
         });
     }
 

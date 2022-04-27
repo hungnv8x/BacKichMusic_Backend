@@ -19,9 +19,9 @@ class CreateAlbumsTable extends Migration
             $table->text('image')->nullable();
             $table->string('link')->nullable();
             $table->unsignedBigInteger('singer_id');
-            $table->foreign('singer_id')->references('id')->on('singers');
+            $table->foreign('singer_id')->references('id')->on('singers')->onDelete('cascade');
             $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }
